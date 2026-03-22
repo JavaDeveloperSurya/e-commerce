@@ -118,3 +118,13 @@
 {"level":"info","message":"Server is running on port 3000","service":"e_commerce-api","timestamp":"2026-03-22T07:28:06.067Z"}
 {"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T07:28:06.113Z"}
 {"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T07:28:07.210Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T07:57:01.639Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T07:57:01.759Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T07:57:02.360Z"}
+{"level":"info","message":"Server is running on port 3000","service":"e_commerce-api","timestamp":"2026-03-22T07:57:02.374Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T07:57:02.387Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T07:57:04.008Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-22T07:58:14.180Z"}
+{"level":"info","message":"GET /api/product/all 200 61 - 105.848 ms","service":"e_commerce-api","timestamp":"2026-03-22T07:58:14.286Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-22T07:58:34.178Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 140.920 ms","service":"e_commerce-api","timestamp":"2026-03-22T07:58:34.318Z"}
