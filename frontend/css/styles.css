@@ -140,3 +140,16 @@ body {
     height: 190px;
   }
 }
+
+.login-shell {
+  border-radius: 1.5rem;
+}
+
+.login-hero {
+  background: radial-gradient(circle at top right, rgba(255, 153, 0, 0.35), transparent 28%), linear-gradient(145deg, #131921, #232f3e 58%, #37475a);
+}
+
+.otp-input {
+  letter-spacing: 0.35rem;
+  font-weight: 700;
+}

@@ -15,7 +15,8 @@ const sidebarLinksByRole = {
     { href: 'seller-dashboard.html', icon: 'bi-shop', label: 'Seller Dashboard' },
     { href: 'add-product.html', icon: 'bi-plus-square', label: 'Add Product' },
     { href: 'my-products.html', icon: 'bi-grid', label: 'My Products' },
-    { href: 'seller-orders.html', icon: 'bi-receipt', label: 'Seller Orders' }
+    { href: 'seller-orders.html', icon: 'bi-receipt', label: 'Seller Orders' },
+    { href: 'profile.html', icon: 'bi-person', label: 'Profile' }
   ],
   admin: [
     { href: 'admin-dashboard.html', icon: 'bi-shield-check', label: 'Admin Dashboard' },
@@ -59,18 +60,11 @@ const uiService = {
     const user = authService.getCurrentUser();
     if (!area || !user) return;
 
-    const dashboardMap = {
-      buyer: 'user-dashboard.html',
-      seller: 'seller-dashboard.html',
-      admin: 'admin-dashboard.html',
-      superadmin: 'superadmin-dashboard.html'
-    };
-
     area.innerHTML = `
       <li class="nav-item"><a class="nav-link" href="../pages/home.html">Home</a></li>
       <li class="nav-item"><a class="nav-link" href="../pages/cart.html">Cart</a></li>
       <li class="nav-item"><a class="nav-link" href="../pages/wishlist.html">Wishlist</a></li>
-      <li class="nav-item"><a class="nav-link" href="../pages/${dashboardMap[user.role] || 'user-dashboard.html'}">${user.roleLabel} panel</a></li>
+      <li class="nav-item"><a class="nav-link" href="../pages/${authService.getDashboardUrl(user.role)}">${user.roleLabel} panel</a></li>
       <li class="nav-item"><button class="btn btn-warning btn-sm fw-semibold" id="logoutBtn">Logout</button></li>
     `;
 
@@ -148,10 +142,30 @@ const uiService = {
       event.preventDefault();
       const query = document.getElementById('globalSearchInput')?.value?.trim() || '';
       const url = new URL(window.location.href);
-      url.searchParams.set('search', query);
+      if (query) url.searchParams.set('search', query);
+      else url.searchParams.delete('search');
       url.pathname = url.pathname.replace(/[^/]+$/, 'home.html');
       window.location.href = url.toString();
     });
+  },
+
+  renderStars(rating = 0) {
+    return Array.from({ length: 5 }, (_, index) => `<i class="bi ${index < Math.round(rating) ? 'bi-star-fill text-warning' : 'bi-star text-muted'}"></i>`).join('');
+  },
+
+  formatCurrency(value = 0) {
+    return new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 2 }).format(Number(value || 0));
+  },
+
+  formatDate(value) {
+    if (!value) return '—';
+    return new Date(value).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' });
+  },
+
+  resolveProductImage(product) {
+    const imageRef = product?.images?.[0];
+    if (imageRef?.url) return imageRef.url;
+    return 'https://placehold.co/600x400?text=ShopEase';
   },
 
   getOrderStatusBadge(status = '') {
@@ -159,6 +173,7 @@ const uiService = {
       created: 'secondary',
       pending_payment: 'warning',
       payment_failed: 'danger',
+      failed: 'danger',
       paid: 'info',
       shipped: 'primary',
       out_for_delivery: 'primary',
@@ -166,6 +181,77 @@ const uiService = {
       cancelled: 'dark'
     };
     return `bg-${map[status] || 'secondary'}`;
+  },
+
+  setHtml(id, html) {
+    const node = document.getElementById(id);
+    if (node) node.innerHTML = html;
+  },
+
+  pageHeader({ title, subtitle, actionHtml = '' }) {
+    return `
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-3 mb-4">
+        <div>
+          <p class="text-uppercase text-muted small mb-1">ShopEase Console</p>
+          <h1 class="h3 mb-1">${title}</h1>
+          <p class="text-muted mb-0">${subtitle}</p>
+        </div>
+        <div>${actionHtml}</div>
+      </div>
+    `;
+  },
+
+  dashboardShell(contentHtml) {
+    return `
+      <div class="container py-4 py-lg-5">
+        <div class="row g-4 sidebar-shell">
+          <div class="col-lg-3"><div id="sidebarMount"></div></div>
+          <div class="col-lg-9">${contentHtml}</div>
+        </div>
+      </div>
+    `;
+  },
+
+  statsCards(stats = []) {
+    return `<div class="row g-3 mb-4">${stats.map((stat) => `
+      <div class="col-md-6 col-xl-3">
+        <div class="card placeholder-card h-100">
+          <div class="card-body">
+            <p class="text-muted small text-uppercase mb-2">${stat.label}</p>
+            <h3 class="mb-1">${stat.value}</h3>
+            <p class="text-muted mb-0 small">${stat.meta || ''}</p>
+          </div>
+        </div>
+      </div>
+    `).join('')}</div>`;
+  },
+
+  emptyState(message, icon = 'bi-inbox') {
+    return `<div class="card placeholder-card"><div class="empty-state"><i class="bi ${icon} display-5 text-muted"></i><p class="mt-3 mb-0 text-muted">${message}</p></div></div>`;
+  },
+
+  async guardedRequest(callback, options = {}) {
+    const { requireAuth = true, requireRoles = [] } = options;
+    if (requireAuth && !authService.isAuthenticated()) {
+      this.showToast('Please login to continue', 'error');
+      window.location.href = 'login.html';
+      return null;
+    }
+    if (requireRoles.length && !authService.hasRole(...requireRoles)) {
+      this.showToast('You are not authorized to view this page', 'error');
+      window.location.href = authService.getDashboardUrl(authService.getCurrentUser()?.role || 'buyer');
+      return null;
+    }
+
+    try {
+      this.showLoader();
+      return await callback();
+    } catch (error) {
+      this.showToast(error.message || 'Request failed', 'error');
+      throw error;
+    } finally {
+      this.hideLoader();
+    }
   }
 };
 

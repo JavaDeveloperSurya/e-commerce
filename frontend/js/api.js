@@ -14,6 +14,7 @@ const API_CONFIG = {
       create: '/product/create',
       sellerProducts: '/product/seller/my-products',
       update: (id) => `/product/${id}/update`,
+      stock: (id) => `/product/${id}/stock`,
       remove: (id) => `/product/${id}/delete`
     },
     cart: {
@@ -34,11 +35,20 @@ const API_CONFIG = {
       all: '/shopease/orders',
       details: (id) => `/shopease/${id}`,
       status: (id) => `/shopease/${id}/status`,
-      cancel: (id) => `/shopease/${id}/cancel`
+      cancel: (id) => `/shopease/${id}/cancel`,
+      reject: (id) => `/shopease/${id}/reject`
+    },
+    payments: {
+      create: '/secure/create',
+      pending: '/secure/pending',
+      approve: (orderId) => `/secure/payment/${orderId}/approve`,
+      reject: (orderId) => `/secure/payment/${orderId}/reject`
     },
     reviews: {
       list: (productId) => `/reviews/product/${productId}`,
-      add: '/reviews/add'
+      add: '/reviews/add',
+      update: (id) => `/reviews/update/${id}`,
+      remove: (id) => `/reviews/delete/${id}`
     },
     profile: {
       get: '/users/profile',
@@ -50,13 +60,19 @@ const API_CONFIG = {
       updateProfile: '/seller/profile/update'
     },
     admin: {
-      dashboardUsers: '/admin/users',
+      users: '/admin/users',
+      user: (id) => `/admin/user/${id}`,
+      blockUser: (id) => `/admin/block-user/${id}`,
+      unblockUser: (id) => `/admin/unblock-user/${id}`,
+      sellers: '/admin/sellers',
+      pendingSellers: '/admin/sellers/pending',
+      verifySeller: (id) => `/admin/seller/verify/${id}`,
+      rejectSeller: (id) => `/admin/seller/reject/${id}`,
+      blockSeller: (id) => `/admin/block-seller/${id}`,
+      unblockSeller: (id) => `/admin/unblock-seller/${id}`,
       pendingProducts: '/admin/products/pending',
       verifyProduct: (id) => `/admin/product/verify/${id}`,
       rejectProduct: (id) => `/admin/product/reject/${id}`
-    },
-    categories: {
-      all: '/admin/categories/all'
     }
   }
 };
@@ -74,29 +90,35 @@ const apiService = {
   getAuthHeaders(isJson = true) {
     const token = localStorage.getItem('accessToken');
     const headers = {};
-
     if (isJson) headers['Content-Type'] = 'application/json';
     if (token) headers.Authorization = `Bearer ${token}`;
-
     return headers;
   },
 
-  async request(path, options = {}) {
+  async request(path, options = {}, retry = true) {
     const isFormData = options.body instanceof FormData;
     const headers = {
       ...this.getAuthHeaders(!isFormData),
       ...(options.headers || {})
     };
 
-    // API integration happens here: every frontend module should call the backend through this request helper.
+    // API integration happens here: all backend communication flows through this shared request helper.
     const response = await fetch(`${API_CONFIG.baseURL}${path}`, {
       ...options,
       headers
     });
 
-    let payload;
     const contentType = response.headers.get('content-type') || '';
-    payload = contentType.includes('application/json') ? await response.json() : await response.text();
+    const payload = contentType.includes('application/json') ? await response.json() : await response.text();
+
+    if (response.status === 401 && retry && localStorage.getItem('refreshToken') && !path.includes('/auth/refresh')) {
+      try {
+        await authService.refreshToken();
+        return this.request(path, options, false);
+      } catch (refreshError) {
+        authService.clearSession();
+      }
+    }
 
     if (!response.ok) {
       const message = payload?.message || payload?.error || 'Request failed';
@@ -124,7 +146,7 @@ const apiService = {
   put(path, data) {
     return this.request(path, {
       method: 'PUT',
-      body: JSON.stringify(data)
+      body: data instanceof FormData ? data : JSON.stringify(data)
     });
   },
 

@@ -1,9 +1,9 @@
 const authService = {
   roleMap: {
-    buyer: 'user',
-    seller: 'seller',
-    admin: 'admin',
-    superadmin: 'superadmin'
+    buyer: 'User',
+    seller: 'Seller',
+    admin: 'Admin',
+    superadmin: 'Super Admin'
   },
 
   login(email) {
@@ -80,7 +80,17 @@ const authService = {
   },
 
   getRoleLabel(role) {
-    return this.roleMap[role] || role || 'guest';
+    return this.roleMap[role] || role || 'Guest';
+  },
+
+  getDashboardUrl(role) {
+    const map = {
+      buyer: 'user-dashboard.html',
+      seller: 'seller-dashboard.html',
+      admin: 'admin-dashboard.html',
+      superadmin: 'superadmin-dashboard.html'
+    };
+    return map[role] || 'home.html';
   },
 
   hasRole(...roles) {
