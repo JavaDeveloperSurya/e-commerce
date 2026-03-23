@@ -4,6 +4,7 @@ const mailOptions=require('../templates/otpMailOptions');
 
 const sendOtp=async (userEmail,otp)=>{
     try {
+        // console.log(otp)
         const otpSendOptions=mailOptions(userEmail,otp);
         const info = await sendEmail(otpSendOptions);
         logger.info('Email sent:', info.response);

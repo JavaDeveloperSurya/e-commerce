@@ -128,3 +128,459 @@
 {"level":"info","message":"GET /api/product/all 200 61 - 105.848 ms","service":"e_commerce-api","timestamp":"2026-03-22T07:58:14.286Z"}
 {"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-22T07:58:34.178Z"}
 {"level":"info","message":"GET /api/product/all 304 - - 140.920 ms","service":"e_commerce-api","timestamp":"2026-03-22T07:58:34.318Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T10:55:18.041Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T10:55:18.218Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T10:55:18.880Z"}
+{"level":"info","message":"Server is running on port 3000","service":"e_commerce-api","timestamp":"2026-03-22T10:55:18.893Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T10:55:18.905Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T10:55:20.390Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T10:56:43.715Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T10:56:43.823Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T10:56:44.487Z"}
+{"level":"info","message":"Server is running on port 3000","service":"e_commerce-api","timestamp":"2026-03-22T10:56:44.500Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T10:56:44.515Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T10:56:45.903Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-22T10:56:48.277Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 123.755 ms","service":"e_commerce-api","timestamp":"2026-03-22T10:56:48.398Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T11:19:42.341Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T11:19:42.468Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T11:19:42.974Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T11:19:42.990Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T11:19:43.012Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T11:19:43.979Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T11:26:57.285Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T11:26:57.380Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T11:26:57.762Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T11:26:57.773Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T11:26:57.784Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T11:26:59.085Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T11:41:20.763Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T11:41:20.888Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T11:41:21.390Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T11:41:21.407Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T11:41:21.421Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T11:41:22.983Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T11:41:24.478Z"}
+{"level":"info","message":"user exist ,check user is blocked or not","service":"e_commerce-api","timestamp":"2026-03-22T11:41:24.606Z"}
+{"level":"error","message":"login failed due to error:  otp is not defined","service":"e_commerce-api","stack":"ReferenceError: otp is not defined\n    at login (D:\\e-commerce\\backend\\controllers\\authController.js:56:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-22T11:41:24.686Z"}
+{"level":"info","message":"POST /api/auth/login 500 50 - 245.726 ms","service":"e_commerce-api","timestamp":"2026-03-22T11:41:24.696Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T11:41:29.344Z"}
+{"level":"info","message":"user exist ,check user is blocked or not","service":"e_commerce-api","timestamp":"2026-03-22T11:41:29.421Z"}
+{"level":"error","message":"login failed due to error:  otp is not defined","service":"e_commerce-api","stack":"ReferenceError: otp is not defined\n    at login (D:\\e-commerce\\backend\\controllers\\authController.js:56:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-22T11:41:29.523Z"}
+{"level":"info","message":"POST /api/auth/login 500 50 - 189.542 ms","service":"e_commerce-api","timestamp":"2026-03-22T11:41:29.526Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T11:46:13.857Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<a3c6dd8f-dc28-c1d2-17ce-bb1f551b8f04@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T11:46:17.589Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"7","2":"0","20":"9","21":"9","22":"7","23":"7","24":" ","25":"4","26":"1","27":"b","28":"e","29":"0","3":" ","30":"3","31":"b","32":"0","33":"0","34":"d","35":"2","36":"f","37":"7","38":"-","39":"c","4":"2","40":"7","41":"4","42":"3","43":"a","44":"8","45":"0","46":"1","47":"6","48":"3","49":"b","5":".","50":"s","51":"m","52":"4","53":"9","54":"8","55":"9","56":"2","57":"4","58":"2","59":"a","6":"0","60":"1","61":"2","62":".","63":"1","64":" ","65":"-","66":" ","67":"g","68":"s","69":"m","7":".","70":"t","71":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T11:46:17.591Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T11:46:17.592Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 3739.593 ms","service":"e_commerce-api","timestamp":"2026-03-22T11:46:17.594Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T11:48:12.218Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T11:48:12.368Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T11:48:13.110Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T11:48:13.128Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T11:48:13.171Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T11:48:14.548Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T11:48:18.786Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T11:48:18.916Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T11:48:19.436Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T11:48:19.450Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T11:48:19.464Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T11:48:20.285Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T11:48:26.512Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<d228c96e-6a4b-e370-c36d-87dfd3bb7f42@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T11:48:30.105Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"0","21":"1","22":"0","23":"9","24":" ","25":"4","26":"1","27":"b","28":"e","29":"0","3":" ","30":"3","31":"b","32":"0","33":"0","34":"d","35":"2","36":"f","37":"7","38":"-","39":"c","4":"2","40":"7","41":"4","42":"3","43":"a","44":"8","45":"1","46":"c","47":"6","48":"f","49":"6","5":".","50":"s","51":"m","52":"5","53":"4","54":"3","55":"3","56":"5","57":"4","58":"6","59":"a","6":"0","60":"1","61":"2","62":".","63":"1","64":"4","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T11:48:30.106Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T11:48:30.110Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 3622.825 ms","service":"e_commerce-api","timestamp":"2026-03-22T11:48:30.121Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T11:49:25.515Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T11:49:25.633Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T11:49:26.141Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T11:49:26.158Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T11:49:26.181Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T11:49:27.487Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T11:50:41.233Z"}
+{"level":"info","message":"user exist ,check user is blocked or not","service":"e_commerce-api","timestamp":"2026-03-22T11:50:41.328Z"}
+{"level":"error","message":"login failed due to error:  otp is not defined","service":"e_commerce-api","stack":"ReferenceError: otp is not defined\n    at login (D:\\e-commerce\\backend\\controllers\\authController.js:56:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-22T11:50:41.395Z"}
+{"level":"info","message":"POST /api/auth/login 500 50 - 181.606 ms","service":"e_commerce-api","timestamp":"2026-03-22T11:50:41.403Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T12:31:38.755Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T12:31:38.928Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T12:31:39.579Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T12:31:39.632Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T12:31:39.642Z"}
+{"error":"querySrv ECONNREFUSED _mongodb._tcp.cluster0.z9n5uke.mongodb.net","level":"error","message":"MongoDB connection failed","service":"e_commerce-api","timestamp":"2026-03-22T12:31:39.665Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:33:05.441Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:33:05.589Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:33:06.134Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:33:06.149Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:33:06.162Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:33:28.462Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:35:07.095Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:35:46.895Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:35:46.996Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:35:47.530Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:35:47.545Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:35:47.557Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:35:53.146Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:36:04.081Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:36:04.199Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:36:04.751Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:36:04.766Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:36:04.780Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:36:07.375Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:36:12.780Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<94d47050-cdf3-7f83-4fda-02ae870a8d56@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T13:36:17.916Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"6","21":"5","22":"7","23":"9","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"6","45":"b","46":"1","47":"5","48":"f","49":"b","5":".","50":"s","51":"m","52":"1","53":"0","54":"0","55":"7","56":"9","57":"9","58":"7","59":"7","6":"0","60":"5","61":"a","62":"d","63":".","64":"8","65":"1","66":" ","67":"-","68":" ","69":"g","7":".","70":"s","71":"m","72":"t","73":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T13:36:17.917Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T13:36:17.919Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 5163.184 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:36:17.930Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:38:19.245Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:38:19.392Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:38:20.027Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:38:20.042Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:38:20.057Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:38:23.880Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:38:28.735Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<ebee3a47-449a-7f44-62df-5b4bd517578e@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T13:38:35.298Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"6","21":"7","22":"1","23":"7","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"5","45":"1","46":"6","47":"8","48":"7","49":"7","5":".","50":"s","51":"m","52":"9","53":"8","54":"4","55":"1","56":"3","57":"2","58":"1","59":"5","6":"0","60":"a","61":"d","62":".","63":"1","64":"2","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T13:38:35.299Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T13:38:35.301Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 6582.493 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:38:35.306Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:39:13.804Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:39:13.958Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:39:14.660Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:39:14.673Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:39:14.692Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:39:17.840Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:39:17.963Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:39:18.555Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:39:18.571Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:39:18.595Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:39:20.683Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:39:25.635Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<31848e42-575c-4290-c995-6d5891b41e70@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T13:39:30.413Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"6","21":"7","22":"7","23":"2","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"5","45":"4","46":"b","47":"b","48":"7","49":"6","5":".","50":"s","51":"m","52":"8","53":"1","54":"0","55":"1","56":"7","57":"7","58":"0","59":"5","6":"0","60":"a","61":"d","62":".","63":"3","64":"4","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T13:39:30.415Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T13:39:30.419Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 4801.390 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:39:30.427Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:40:00.563Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:40:00.685Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:40:01.196Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:40:01.207Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:40:01.228Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:40:03.037Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:40:03.161Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:40:03.707Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:40:03.719Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:40:03.741Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:40:05.465Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:40:09.225Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<144485b1-f26a-6731-2abd-d6f32b810f9c@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T13:40:15.270Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"6","21":"8","22":"1","23":"6","24":" ","25":"9","26":"8","27":"e","28":"6","29":"7","3":" ","30":"e","31":"d","32":"5","33":"9","34":"e","35":"1","36":"d","37":"1","38":"-","39":"3","4":"2","40":"5","41":"b","42":"d","43":"3","44":"e","45":"b","46":"4","47":"6","48":"b","49":"2","5":".","50":"s","51":"m","52":"7","53":"1","54":"1","55":"3","56":"3","57":"9","58":"4","59":"a","6":"0","60":"9","61":"1","62":".","63":"2","64":" ","65":"-","66":" ","67":"g","68":"s","69":"m","7":".","70":"t","71":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T13:40:15.271Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T13:40:15.272Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 6064.596 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:40:15.279Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:40:39.861Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:40:40.005Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:40:40.586Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:40:40.604Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:40:40.624Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:40:42.947Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:42:31.200Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:42:31.300Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:42:31.728Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:42:31.739Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:42:31.748Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:42:33.443Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:42:38.526Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<e391bf63-7122-51d6-659c-8b13bf70df87@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T13:42:43.240Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"6","21":"9","22":"6","23":"4","24":" ","25":"4","26":"1","27":"b","28":"e","29":"0","3":" ","30":"3","31":"b","32":"0","33":"0","34":"d","35":"2","36":"f","37":"7","38":"-","39":"c","4":"2","40":"7","41":"4","42":"4","43":"4","44":"3","45":"c","46":"c","47":"9","48":"e","49":"d","5":".","50":"s","51":"m","52":"5","53":"6","54":"6","55":"6","56":"4","57":"7","58":"6","59":"a","6":"0","60":"1","61":"2","62":".","63":"2","64":"3","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T13:42:43.241Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T13:42:43.245Z"}
+{"level":"info","message":"POST /api/auth/login 200 51 - 4736.843 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:42:43.253Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T13:46:15.661Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T13:46:15.811Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T13:46:16.534Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T13:46:16.559Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T13:46:16.575Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-22T13:46:18.331Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T13:46:24.618Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<54b1a535-212b-88e1-60b1-ee86f43805b6@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-22T13:46:29.432Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"1","19":"8","2":"0","20":"7","21":"1","22":"9","23":"1","24":" ","25":"9","26":"8","27":"e","28":"6","29":"7","3":" ","30":"e","31":"d","32":"5","33":"9","34":"e","35":"1","36":"d","37":"1","38":"-","39":"3","4":"2","40":"5","41":"b","42":"d","43":"2","44":"5","45":"f","46":"b","47":"8","48":"f","49":"b","5":".","50":"s","51":"m","52":"2","53":"5","54":"4","55":"5","56":"3","57":"3","58":"3","59":"a","6":"0","60":"9","61":"1","62":".","63":"1","64":" ","65":"-","66":" ","67":"g","68":"s","69":"m","7":".","70":"t","71":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-22T13:46:29.433Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-22T13:46:29.435Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 4832.421 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:46:29.440Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-22T13:47:54.899Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-22T13:47:54.901Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-22T13:47:54.902Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69b94b189d63e6f19fa9736b","service":"e_commerce-api","timestamp":"2026-03-22T13:47:55.392Z"}
+{"level":"info","message":"POST /api/auth/verify 200 405 - 498.043 ms","service":"e_commerce-api","timestamp":"2026-03-22T13:47:55.394Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-22T14:00:28.341Z"}
+{"level":"warn","message":"User does not exist,store the email and role as buyer","service":"e_commerce-api","timestamp":"2026-03-22T14:00:28.528Z"}
+{"level":"error","message":"login failed due to error:  otp is not defined","service":"e_commerce-api","stack":"ReferenceError: otp is not defined\n    at login (D:\\e-commerce\\backend\\controllers\\authController.js:57:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","timestamp":"2026-03-22T14:00:28.733Z"}
+{"level":"info","message":"POST /api/auth/login 500 50 - 399.961 ms","service":"e_commerce-api","timestamp":"2026-03-22T14:00:28.737Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-22T14:09:53.532Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-22T14:09:53.652Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-22T14:09:54.232Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-22T14:09:54.244Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-22T14:09:54.278Z"}
+{"error":"querySrv ECONNREFUSED _mongodb._tcp.cluster0.z9n5uke.mongodb.net","level":"error","message":"MongoDB connection failed","service":"e_commerce-api","timestamp":"2026-03-22T14:09:54.299Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T03:29:04.644Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T03:29:04.835Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T03:29:05.538Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T03:29:05.549Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T03:29:05.560Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T03:29:07.561Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T03:29:46.274Z"}
+{"level":"info","message":"user exist ,check user is blocked or not","service":"e_commerce-api","timestamp":"2026-03-23T03:29:46.403Z"}
+{"level":"info","message":"Email sent successfully to kumarsurya45394@gmail.com","messageId":"<386130f0-848a-85c7-44e6-45adb67a04c6@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T03:29:49.953Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"6","21":"5","22":"8","23":"9","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"6","45":"5","46":"6","47":"b","48":"6","49":"7","5":".","50":"s","51":"m","52":"1","53":"1","54":"5","55":"0","56":"3","57":"4","58":"7","59":"5","6":"0","60":"5","61":"a","62":"d","63":".","64":"3","65":"8","66":" ","67":"-","68":" ","69":"g","7":".","70":"s","71":"m","72":"t","73":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T03:29:49.955Z"}
+{"level":"info","message":"POST /api/auth/login 200 97 - 3703.035 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:29:49.960Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.420Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.422Z"}
+{"level":"info","message":"Generating tokens for user: kumarsurya45394@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.423Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bff5fc3b15523e70338269","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.588Z"}
+{"level":"info","message":"POST /api/auth/verify 200 409 - 176.419 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.590Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.599Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.604Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.605Z"}
+{"level":"info","message":"buyer authenticated","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.605Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.606Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.672Z"}
+{"level":"info","message":"GET /api/users/profile 200 293 - 77.605 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:30:14.675Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:22.505Z"}
+{"level":"info","message":"GET /api/product/all 200 61 - 82.828 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:30:22.588Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.722Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.724Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.725Z"}
+{"level":"info","message":"buyer authenticated","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.726Z"}
+{"level":"info","message":"get user orders endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.726Z"}
+{"level":"error","message":"order not found","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.791Z"}
+{"level":"info","message":"GET /api/shopease/my-orders 400 45 - 71.835 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:30:45.793Z"}
+{"level":"info","message":"logout user endpoint hit...","service":"e_commerce-api","timestamp":"2026-03-23T03:31:17.070Z"}
+{"level":"info","message":"refresh token deleted successfully for logout","service":"e_commerce-api","timestamp":"2026-03-23T03:31:17.371Z"}
+{"level":"info","message":"POST /api/auth/logout 200 51 - 305.835 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:31:17.373Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T03:32:05.620Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<d32e527e-2b03-8a77-f523-45871f39999b@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T03:32:08.767Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"6","21":"7","22":"2","23":"8","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"5","45":"1","46":"6","47":"1","48":"a","49":"0","5":".","50":"s","51":"m","52":"1","53":"0","54":"9","55":"5","56":"5","57":"3","58":"3","59":"6","6":"0","60":"5","61":"a","62":"d","63":".","64":"1","65":"0","66":" ","67":"-","68":" ","69":"g","7":".","70":"s","71":"m","72":"t","73":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T03:32:08.768Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T03:32:08.769Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3154.723 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:32:08.770Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T03:32:34.386Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T03:32:34.388Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T03:32:34.390Z"}
+{"level":"warn","message":"Token generation failed - user not found: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T03:32:34.452Z"}
+{"0":"U","1":"s","10":"o","11":"u","12":"n","13":"d","2":"e","3":"r","4":" ","5":"n","6":"o","7":"t","8":" ","9":"f","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T03:32:34.453Z"}
+{"level":"error","message":"verify-otp failed due to error:  User not found","service":"e_commerce-api","stack":"Error: User not found\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:14:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T03:32:34.454Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 72.683 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:32:34.456Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T03:32:41.582Z"}
+{"level":"warn","message":"token and otp not present in redis","service":"e_commerce-api","timestamp":"2026-03-23T03:32:41.584Z"}
+{"level":"info","message":"POST /api/auth/verify 400 57 - 8.481 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:32:41.587Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T03:33:45.907Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<8f8b83f4-28b0-ba5b-8065-73d085dd2ea6@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T03:33:49.450Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"6","21":"8","22":"2","23":"9","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"5","45":"4","46":"b","47":"b","48":"7","49":"6","5":".","50":"s","51":"m","52":"9","53":"4","54":"7","55":"3","56":"5","57":"0","58":"6","59":"5","6":"0","60":"a","61":"d","62":".","63":"3","64":"4","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T03:33:49.451Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T03:33:49.452Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3551.154 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:33:49.454Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T03:34:13.870Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T03:34:13.872Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T03:34:13.874Z"}
+{"level":"warn","message":"Token generation failed - user not found: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T03:34:13.952Z"}
+{"0":"U","1":"s","10":"o","11":"u","12":"n","13":"d","2":"e","3":"r","4":" ","5":"n","6":"o","7":"t","8":" ","9":"f","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T03:34:13.952Z"}
+{"level":"error","message":"verify-otp failed due to error:  User not found","service":"e_commerce-api","stack":"Error: User not found\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:14:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T03:34:13.953Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 86.446 ms","service":"e_commerce-api","timestamp":"2026-03-23T03:34:13.955Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:01:59.053Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:01:59.184Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:01:59.796Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:01:59.830Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:01:59.840Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:02:01.171Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T04:03:27.584Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<16f5c180-7f44-766a-5010-7141414fc3ba@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T04:03:31.790Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"8","21":"6","22":"1","23":"4","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"6","45":"7","46":"4","47":"4","48":"a","49":"5","5":".","50":"s","51":"m","52":"9","53":"2","54":"8","55":"6","56":"7","57":"3","58":"9","59":"5","6":"0","60":"a","61":"d","62":".","63":"6","64":"3","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T04:03:31.792Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T04:03:31.794Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 4244.272 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:03:31.802Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:03:51.816Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T04:03:51.822Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:03:51.824Z"}
+{"level":"warn","message":"Token generation failed - user not found: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:03:51.942Z"}
+{"0":"U","1":"s","10":"o","11":"u","12":"n","13":"d","2":"e","3":"r","4":" ","5":"n","6":"o","7":"t","8":" ","9":"f","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T04:03:51.944Z"}
+{"level":"error","message":"verify-otp failed due to error:  User not found","service":"e_commerce-api","stack":"Error: User not found\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:17:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T04:03:51.945Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 141.282 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:03:51.948Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:06:57.380Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:06:57.502Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:06:58.023Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:06:58.037Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:06:58.054Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:06:59.475Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:07:05.417Z"}
+{"level":"warn","message":"token and otp not present in redis","service":"e_commerce-api","timestamp":"2026-03-23T04:07:05.418Z"}
+{"level":"info","message":"POST /api/auth/verify 400 57 - 21.488 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:07:05.428Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T04:07:39.781Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<f0e9678e-45dc-f1bb-b0b7-f4630e61bc6a@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T04:07:43.398Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"8","21":"8","22":"6","23":"6","24":" ","25":"d","26":"2","27":"e","28":"1","29":"a","3":" ","30":"7","31":"2","32":"f","33":"c","34":"c","35":"a","36":"5","37":"8","38":"-","39":"8","4":"2","40":"2","41":"b","42":"0","43":"4","44":"0","45":"d","46":"a","47":"7","48":"b","49":"e","5":".","50":"s","51":"m","52":"7","53":"6","54":"7","55":"3","56":"2","57":"0","58":"3","59":"b","6":"0","60":"3","61":"a","62":".","63":"4","64":"9","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T04:07:43.400Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T04:07:43.402Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3630.890 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:07:43.404Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:07:55.566Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T04:07:55.568Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:07:55.570Z"}
+{"level":"warn","message":"Token generation failed - user not found: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:07:55.790Z"}
+{"0":"U","1":"s","10":"o","11":"u","12":"n","13":"d","2":"e","3":"r","4":" ","5":"n","6":"o","7":"t","8":" ","9":"f","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T04:07:55.792Z"}
+{"level":"error","message":"verify-otp failed due to error:  User not found","service":"e_commerce-api","stack":"Error: User not found\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:18:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T04:07:55.794Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 234.403 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:07:55.797Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:08:59.096Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:08:59.203Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:08:59.675Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:08:59.689Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:08:59.713Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:09:01.028Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T04:09:11.272Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<eed9c091-bff5-ae7f-2586-fdc699a6f995@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T04:09:15.074Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"8","21":"9","22":"5","23":"7","24":" ","25":"9","26":"8","27":"e","28":"6","29":"7","3":" ","30":"e","31":"d","32":"5","33":"9","34":"e","35":"1","36":"d","37":"1","38":"-","39":"3","4":"2","40":"5","41":"b","42":"c","43":"6","44":"1","45":"2","46":"d","47":"6","48":"f","49":"3","5":".","50":"s","51":"m","52":"1","53":"3","54":"2","55":"2","56":"5","57":"8","58":"7","59":"9","6":"0","60":"a","61":"9","62":"1","63":".","64":"1","65":"7","66":" ","67":"-","68":" ","69":"g","7":".","70":"s","71":"m","72":"t","73":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T04:09:15.076Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T04:09:15.080Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3824.692 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:09:15.099Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:09:29.935Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T04:09:29.939Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:09:29.941Z"}
+{"0":"C","1":"a","10":"d","11":" ","12":"p","13":"r","14":"o","15":"p","16":"e","17":"r","18":"t","19":"i","2":"n","20":"e","21":"s","22":" ","23":"o","24":"f","25":" ","26":"n","27":"u","28":"l","29":"l","3":"n","30":" ","31":"(","32":"r","33":"e","34":"a","35":"d","36":"i","37":"n","38":"g","39":" ","4":"o","40":"'","41":"_","42":"i","43":"d","44":"'","45":")","5":"t","6":" ","7":"r","8":"e","9":"a","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T04:09:30.168Z"}
+{"level":"error","message":"verify-otp failed due to error:  Cannot read properties of null (reading '_id')","service":"e_commerce-api","stack":"TypeError: Cannot read properties of null (reading '_id')\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:22:26)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T04:09:30.170Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 245.292 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:09:30.173Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:11:24.691Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:11:24.806Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:11:25.282Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:11:25.292Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:11:25.304Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:11:26.749Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:11:35.219Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:11:35.323Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:11:35.769Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:11:35.779Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:11:35.835Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:11:36.988Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:12:09.704Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:12:09.860Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:12:10.380Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:12:10.396Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:12:10.420Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:12:12.012Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:12:16.434Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:12:16.581Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:12:17.103Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:12:17.125Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:12:17.155Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:12:18.671Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:12:25.749Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:12:25.963Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:12:26.513Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:12:26.527Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:12:26.550Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:12:28.393Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:12:28.498Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:12:28.998Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:12:29.010Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:12:29.033Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-01.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:12:30.374Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:12:34.025Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:12:34.167Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:12:34.584Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:12:34.595Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:12:34.613Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:12:35.857Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T04:12:54.532Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<1ab1748f-8897-aa6d-4214-48a2eff16de5@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T04:12:57.908Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"9","21":"1","22":"8","23":"0","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"6","45":"5","46":"6","47":"b","48":"5","49":"1","5":".","50":"s","51":"m","52":"1","53":"1","54":"4","55":"5","56":"0","57":"5","58":"3","59":"8","6":"0","60":"5","61":"a","62":"d","63":".","64":"5","65":"4","66":" ","67":"-","68":" ","69":"g","7":".","70":"s","71":"m","72":"t","73":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T04:12:57.909Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T04:12:57.911Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3404.289 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:12:57.922Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:13:09.339Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T04:13:09.341Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:13:09.342Z"}
+{"0":"u","1":"s","10":"t","11":" ","12":"d","13":"e","14":"f","15":"i","16":"n","17":"e","18":"d","2":"e","3":"r","4":" ","5":"i","6":"s","7":" ","8":"n","9":"o","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T04:13:09.666Z"}
+{"level":"error","message":"verify-otp failed due to error:  user is not defined","service":"e_commerce-api","stack":"ReferenceError: user is not defined\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:35:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T04:13:09.670Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 338.702 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:13:09.673Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:13:42.590Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:13:42.709Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:13:43.196Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:13:43.206Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:13:43.220Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:13:44.895Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:13:49.110Z"}
+{"level":"warn","message":"token and otp not present in redis","service":"e_commerce-api","timestamp":"2026-03-23T04:13:49.112Z"}
+{"level":"info","message":"POST /api/auth/verify 400 57 - 22.221 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:13:49.120Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T04:13:58.605Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<f9fecc17-c1c6-8f73-960f-c6563f874670@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T04:14:02.502Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"9","21":"2","22":"4","23":"5","24":" ","25":"d","26":"9","27":"4","28":"4","29":"3","3":" ","30":"c","31":"0","32":"1","33":"a","34":"7","35":"3","36":"3","37":"6","38":"-","39":"2","4":"2","40":"b","41":"0","42":"8","43":"3","44":"5","45":"4","46":"7","47":"7","48":"2","49":"f","5":".","50":"s","51":"m","52":"9","53":"4","54":"3","55":"1","56":"8","57":"6","58":"2","59":"5","6":"0","60":"a","61":"d","62":".","63":"2","64":"8","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T04:14:02.504Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T04:14:02.505Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3913.805 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:14:02.508Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:14:10.081Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T04:14:10.083Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:14:10.085Z"}
+{"0":"u","1":"s","10":"t","11":" ","12":"d","13":"e","14":"f","15":"i","16":"n","17":"e","18":"d","2":"e","3":"r","4":" ","5":"i","6":"s","7":" ","8":"n","9":"o","level":"error","message":"Error generating tokens:","service":"e_commerce-api","timestamp":"2026-03-23T04:14:10.396Z"}
+{"level":"error","message":"verify-otp failed due to error:  user is not defined","service":"e_commerce-api","stack":"ReferenceError: user is not defined\n    at generateTokens (D:\\e-commerce\\backend\\utils\\generateTokens.js:38:66)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async verifyOtp (D:\\e-commerce\\backend\\controllers\\authController.js:123:42)","timestamp":"2026-03-23T04:14:10.397Z"}
+{"level":"info","message":"POST /api/auth/verify 500 50 - 323.418 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:14:10.399Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:14:36.992Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:14:37.096Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:14:37.500Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:14:37.510Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:14:37.527Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:14:38.866Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:15:25.720Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:15:25.850Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:15:26.302Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:15:26.315Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:15:26.331Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:15:27.403Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T04:15:36.897Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T04:15:37.047Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:15:37.622Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T04:15:37.645Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T04:15:37.662Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T04:15:38.873Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T04:15:51.094Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<f61c4abc-de4c-83dc-3887-52f897681fb1@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T04:15:54.778Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"3","2":"0","20":"9","21":"3","22":"5","23":"7","24":" ","25":"9","26":"8","27":"e","28":"6","29":"7","3":" ","30":"e","31":"d","32":"5","33":"9","34":"e","35":"1","36":"d","37":"1","38":"-","39":"3","4":"2","40":"5","41":"b","42":"d","43":"2","44":"6","45":"4","46":"b","47":"b","48":"2","49":"9","5":".","50":"s","51":"m","52":"3","53":"7","54":"7","55":"6","56":"9","57":"7","58":"9","59":"a","6":"0","60":"9","61":"1","62":".","63":"2","64":" ","65":"-","66":" ","67":"g","68":"s","69":"m","7":".","70":"t","71":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T04:15:54.780Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T04:15:54.782Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 3709.010 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:15:54.791Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T04:16:05.535Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T04:16:05.538Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bf99f202be5d354b026f6e","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.104Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.105Z"}
+{"level":"info","message":"POST /api/auth/verify 200 405 - 576.543 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.110Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.150Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.158Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.160Z"}
+{"level":"warn","message":"buyer authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.161Z"}
+{"level":"info","message":"GET /api/users/profile 403 69 - 18.445 ms","service":"e_commerce-api","timestamp":"2026-03-23T04:16:06.164Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T05:32:58.397Z"}
+{"level":"info","message":"Email sent successfully to mrrajprasad5@gmail.com","messageId":"<dd42dc67-ed41-a909-fa54-c3c69207eb27@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T05:33:02.996Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"4","2":"0","20":"3","21":"9","22":"8","23":"5","24":" ","25":"d","26":"2","27":"e","28":"1","29":"a","3":" ","30":"7","31":"2","32":"f","33":"c","34":"c","35":"a","36":"5","37":"8","38":"-","39":"8","4":"2","40":"2","41":"b","42":"0","43":"4","44":"0","45":"d","46":"e","47":"b","48":"f","49":"9","5":".","50":"s","51":"m","52":"8","53":"2","54":"7","55":"3","56":"8","57":"5","58":"4","59":"b","6":"0","60":"3","61":"a","62":".","63":"4","64":"7","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T05:33:02.997Z"}
+{"level":"info","message":"admin email,otp sent to email","service":"e_commerce-api","timestamp":"2026-03-23T05:33:02.999Z"}
+{"level":"info","message":"POST /api/auth/login 200 98 - 4608.082 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:33:03.000Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T05:33:11.715Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T05:33:11.717Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bf99f202be5d354b026f6e","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.064Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.064Z"}
+{"level":"info","message":"POST /api/auth/verify 200 405 - 356.542 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.067Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.080Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.083Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.084Z"}
+{"level":"warn","message":"buyer authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.085Z"}
+{"level":"info","message":"GET /api/users/profile 403 69 - 9.549 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:33:12.092Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T05:34:28.829Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 144.023 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:34:28.974Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T05:34:46.979Z"}
+{"level":"warn","message":"User does not exist,store the email and role as buyer","service":"e_commerce-api","timestamp":"2026-03-23T05:34:47.054Z"}
+{"level":"info","message":"Email sent successfully to kumarsurya7766@gmail.com","messageId":"<426329d0-961e-25b8-7eea-6b6efb8f0a5b@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T05:34:50.474Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"4","2":"0","20":"4","21":"0","22":"9","23":"3","24":" ","25":"9","26":"8","27":"e","28":"6","29":"7","3":" ","30":"e","31":"d","32":"5","33":"9","34":"e","35":"1","36":"d","37":"1","38":"-","39":"3","4":"2","40":"5","41":"b","42":"d","43":"4","44":"0","45":"e","46":"4","47":"b","48":"f","49":"2","5":".","50":"s","51":"m","52":"7","53":"9","54":"0","55":"1","56":"3","57":"1","58":"5","59":"a","6":"0","60":"9","61":"1","62":".","63":"1","64":"1","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T05:34:50.477Z"}
+{"level":"info","message":"POST /api/auth/login 200 97 - 3508.769 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:34:50.480Z"}
+{"level":"info","message":"Login endpoint hit....","service":"e_commerce-api","timestamp":"2026-03-23T05:36:54.207Z"}
+{"level":"info","message":"user exist ,check user is blocked or not","service":"e_commerce-api","timestamp":"2026-03-23T05:36:54.385Z"}
+{"level":"info","message":"Email sent successfully to kumarsurya45394@gmail.com","messageId":"<33aa1a94-dcf3-f126-8154-acb7ed82467a@gmail.com>","service":"e_commerce-api","timestamp":"2026-03-23T05:36:57.917Z"}
+{"0":"2","1":"5","10":"O","11":"K","12":" ","13":" ","14":"1","15":"7","16":"7","17":"4","18":"2","19":"4","2":"0","20":"4","21":"2","22":"2","23":"0","24":" ","25":"d","26":"2","27":"e","28":"1","29":"a","3":" ","30":"7","31":"2","32":"f","33":"c","34":"c","35":"a","36":"5","37":"8","38":"-","39":"8","4":"2","40":"2","41":"b","42":"0","43":"4","44":"0","45":"9","46":"c","47":"1","48":"c","49":"e","5":".","50":"s","51":"m","52":"7","53":"9","54":"7","55":"4","56":"6","57":"4","58":"4","59":"b","6":"0","60":"3","61":"a","62":".","63":"3","64":"6","65":" ","66":"-","67":" ","68":"g","69":"s","7":".","70":"m","71":"t","72":"p","8":"0","9":" ","level":"info","message":"Email sent:","service":"e_commerce-api","timestamp":"2026-03-23T05:36:57.920Z"}
+{"level":"info","message":"POST /api/auth/login 200 97 - 3718.844 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:36:57.923Z"}
+{"level":"info","message":"verify otp endpoint hit.....","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.451Z"}
+{"level":"info","message":"Generating tokens for user: kumarsurya45394@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.453Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bff5fc3b15523e70338269","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.649Z"}
+{"level":"info","message":"otp verify sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.650Z"}
+{"level":"info","message":"POST /api/auth/verify 200 409 - 206.087 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.653Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.673Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.676Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.677Z"}
+{"level":"info","message":"buyer authenticated","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.677Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.678Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.735Z"}
+{"level":"info","message":"GET /api/users/profile 200 293 - 67.201 ms","service":"e_commerce-api","timestamp":"2026-03-23T05:37:22.737Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T06:00:22.924Z"}
+{"level":"warn","message":"authentication failed, token expired","service":"e_commerce-api","timestamp":"2026-03-23T06:00:22.927Z"}
+{"level":"info","message":"GET /api/users/profile 401 65 - 8.628 ms","service":"e_commerce-api","timestamp":"2026-03-23T06:00:22.930Z"}
+{"level":"info","message":"refresgh token endpoint hit...","service":"e_commerce-api","timestamp":"2026-03-23T06:00:23.028Z"}
+{"level":"info","message":"POST /api/auth/refresh - - - - ms","service":"e_commerce-api","timestamp":"2026-03-23T06:00:25.021Z"}
+{"cause":{"beforeHandshake":false,"errorLabelSet":{}},"errorLabelSet":{},"level":"error","message":"refresh token failed due to error:  getaddrinfo ENOTFOUND ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","reason":{"commonWireVersion":25,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":{"$oid":"7fffffff0000000000000014"},"maxSetVersion":10,"servers":{"ac-tndgswv-shard-00-00.z9n5uke.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tndgswv-shard-00-00.z9n5uke.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":6290110,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-tndgswv-shard-00-01.z9n5uke.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tndgswv-shard-00-01.z9n5uke.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":6290110,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"},"ac-tndgswv-shard-00-02.z9n5uke.mongodb.net:27017":{"$clusterTime":null,"address":"ac-tndgswv-shard-00-02.z9n5uke.mongodb.net:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":6290109,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":"atlas-b29gsv-shard-0","stale":false,"type":"ReplicaSetNoPrimary"},"service":"e_commerce-api","stack":"MongoServerSelectionError: getaddrinfo ENOTFOUND ac-tndgswv-shard-00-02.z9n5uke.mongodb.net\n    at Topology.selectServer (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\sdam\\topology.js:347:38)\n    at async tryOperation (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:150:18)\n    at async executeOperation (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:80:16)\n    at async FindCursor._initialize (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\cursor\\find_cursor.js:62:26)\n    at async FindCursor.cursorInit (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:620:27)\n    at async FindCursor.fetchBatch (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:654:13)\n    at async FindCursor.next (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\cursor\\abstract_cursor.js:326:17)\n    at async Collection.findOne (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\collection.js:313:24)\n    at async model.Query._findOne (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\query.js:2731:15)\n    at async model.Query.exec (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\query.js:4726:63)","timestamp":"2026-03-23T06:16:48.242Z"}

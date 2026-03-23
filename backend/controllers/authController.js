@@ -2,6 +2,7 @@ const logger = require('../utils/logger');
 const {loginValidation}=require('../validators/authValidator');
 const User=require('../models/User');
 const RefreshToken=require('../models/RefreshToken');
+const Admin = require('../models/Admin');
 const redisClient=require('../config/redis');
 const {sendOtp,compareOtp}=require('../utils/login-otp');
 const generateTokens=require('../utils/generateTokens');
@@ -23,7 +24,9 @@ const login=async(req,res)=>{
         }
         // checck admin email
         if(email === process.env.EMAIL_USER){
-            const {token,otp} = generateOTP;
+            const admin = await Admin.findOne({email});
+            await RefreshToken.deleteOne({admin});
+            const {token,otp} = await generateOTP(email);
             await sendOtp(email, otp);
             logger.info('admin email,otp sent to email');
             return res.status(200).json({
@@ -52,7 +55,7 @@ const login=async(req,res)=>{
         // 
         await RefreshToken.deleteOne({user});
         // generate a token and also otp ,store in redis
-       
+        const {token,otp} = await generateOTP(email);
         await sendOtp(email, otp);
         res.status(200).json({
             sucess:true,
@@ -114,11 +117,10 @@ const verifyOtp=async(req,res)=>{
             })
         }
         // if the otp match
-        logger.info('otp verify sucessfully');
         const email=data.email;
         await redisClient.del(key);
         const {accessToken,refreshToken}=await generateTokens(email);
-        
+        logger.info('otp verify sucessfully');
         res.status(200).json({
             sucess:true,
             message:'otp verify sucessfully',

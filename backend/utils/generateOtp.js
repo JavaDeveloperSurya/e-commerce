@@ -1,9 +1,10 @@
 const {v4:uuidv4}=require('uuid');
 const redisClient=require('../config/redis');
 
-const generateOTP = async()=>{
+const generateOTP = async(email)=>{
     const token=uuidv4();
     const otp = (Math.floor(100000 + Math.random()*900000)).toString(); //6 digit 
+    console.log(otp)
     const key=`otp:${token}`;
 
     await redisClient.set(
