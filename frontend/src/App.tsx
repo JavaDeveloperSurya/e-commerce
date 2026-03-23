@@ -42,7 +42,7 @@ const App = () => (
               <Route path="/wishlist" element={<ProtectedRoute roles={['buyer']}><WishlistPage /></ProtectedRoute>} />
               <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
               <Route path="/admin" element={<ProtectedRoute roles={['admin']}><AdminDashboard /></ProtectedRoute>} />
-              <Route path="/seller" element={<ProtectedRoute roles={['seller']}><SellerDashboard /></ProtectedRoute>} />
+              <Route path="/seller" element={<ProtectedRoute roles={['buyer', 'seller']}><SellerDashboard /></ProtectedRoute>} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

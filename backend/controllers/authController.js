@@ -25,7 +25,9 @@ const login=async(req,res)=>{
         // checck admin email
         if(email === process.env.EMAIL_USER){
             const admin = await Admin.findOne({email});
-            await RefreshToken.deleteOne({admin});
+            if(admin){
+                await RefreshToken.deleteOne({user: admin._id});
+            }
             const {token,otp} = await generateOTP(email);
             await sendOtp(email, otp);
             logger.info('admin email,otp sent to email');
@@ -53,7 +55,7 @@ const login=async(req,res)=>{
             }
         }
         // 
-        await RefreshToken.deleteOne({user});
+        await RefreshToken.deleteOne({user:user._id});
         // generate a token and also otp ,store in redis
         const {token,otp} = await generateOTP(email);
         await sendOtp(email, otp);
@@ -216,9 +218,11 @@ const refreshToken=async (req,res)=>{
                 message:'Invalid or expire refresh token'
             })
         }
-        // extract user
+        // extract user or admin
         const user=await User.findById(storedRefreshToken.user);
-        if(!user){
+        const admin = user ? null : await Admin.findById(storedRefreshToken.user);
+        const account = user || admin;
+        if(!account){
             logger.warn('user not found');
             return res.status(400).json({
                 sucess:false,
@@ -226,7 +230,7 @@ const refreshToken=async (req,res)=>{
             })
         }
         // generate new tokens
-        const {accessToken:newAccessToken,refreshToken:newRefreshToken}=await generateTokens(user.email);
+        const {accessToken:newAccessToken,refreshToken:newRefreshToken}=await generateTokens(account.email);
         // delete the previous token
         await RefreshToken.deleteOne({_id:storedRefreshToken._id});
         logger.info('token refreshed sucessfully');
@@ -266,7 +270,9 @@ const logout=async (req,res)=>{
         }
         const user=await User.findById(data.user);
         
-        if(!user){
+        const admin = user ? null : await Admin.findById(data.user);
+
+        if(!user && !admin){
             logger.warn('Invalid refresh token');
             return res.status(400).json({
                 sucess:false,

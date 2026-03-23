@@ -51,7 +51,7 @@ export function Navbar() {
                   <Link to="/admin"><LayoutDashboard className="mr-1 h-4 w-4" />Admin</Link>
                 </Button>
               )}
-              {user?.role === 'seller' && (
+               {(user?.role === 'seller' || user?.role === 'buyer') && (
                 <Button variant="ghost" size="sm" asChild>
                   <Link to="/seller"><Store className="mr-1 h-4 w-4" />Seller</Link>
                 </Button>
@@ -108,7 +108,7 @@ export function Navbar() {
           {isAuthenticated ? (
             <>
               {user?.role === 'admin' && <Link to="/admin" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Admin Dashboard</Link>}
-              {user?.role === 'seller' && <Link to="/seller" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Seller Dashboard</Link>}
+              {(user?.role === 'seller' || user?.role === 'buyer') && <Link to="/seller" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Seller Dashboard</Link>}
               {user?.role === 'buyer' && (
                 <>
                   <Link to="/cart" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Cart</Link>

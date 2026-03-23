@@ -1,12 +1,17 @@
 const logger = require("../utils/logger");
-const User=require('../models/User');
+const User = require('../models/User');
+const Admin = require('../models/Admin');
 
 // get profile
 const getProfile = async(req,res)=>{
     try {
         logger.info('get- profile endpoint  hit');
-        const user = await User.findOne({email:req.info.email});
-        if(!user){
+        let account = await User.findOne({email:req.info.email});
+        if(!account && req.info.role === 'admin'){
+            account = await Admin.findOne({email:req.info.email});
+        }
+
+        if(!account){
             logger.warn('user not found');
             return res.status(404).json({
                 sucess:false,
@@ -17,7 +22,7 @@ const getProfile = async(req,res)=>{
         res.status(200).json({
             success:true,
             message:'user successfully fetched',
-            user
+            user: account
         })
     } catch (error) {
         logger.error('profile can not get due to err: ',error);
