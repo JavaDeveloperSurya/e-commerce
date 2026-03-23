@@ -9,11 +9,36 @@ const {uploadImage} = require('../services/imageUploadService');
 const mongoose = require('mongoose');
 const SellerProfile = require('../models/SellerProfile');
 
+function buildProductQuery(query = {}, { includeHidden = false } = {}) {
+  const filters = { ...query };
+
+  if (!includeHidden) {
+    filters.isDeleted = false;
+    filters.isActive = true;
+    filters.status = 'approved';
+  }
+
+  return Product.find(filters)
+    .populate('categoryId', 'name description slug parentCategory')
+    .populate('images', 'url publicId');
+}
 // get all products
 const getAllProducts = async(req,res)=>{
     logger.info('get all products endpoint hit');
     try {
-        const products = await Product.find({}).populate('categoryId','name description');
+        const { search, categoryId } = req.query;
+        const filters = {};
+
+        if (categoryId && mongoose.Types.ObjectId.isValid(categoryId)) {
+            filters.categoryId = categoryId;
+        }
+        if (search) {
+            filters.$or = [
+                { name: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } },
+            ];
+        }
+        const products = await buildProductQuery(filters).sort({ createdAt: -1 });
         if(!products){
             logger.warn('products not found');
             return res.status(404).json({
@@ -40,13 +65,19 @@ const getProductById = async(req,res)=>{
     logger.info('get single product endpoint hit');
     const productId = req.params.id;
     try {
-        const product = await Product.findById(productId).populate('categoryId','name description');
-        if(!product){
-            logger.warn('products not found');
+        const product = await Product.findOne({
+            _id: productId,
+            isDeleted: false,
+        })
+        .populate('categoryId', 'name description slug parentCategory')
+        .populate('images', 'url publicId');
+
+        if (!product || (!product.isActive && product.status !== 'approved')) {
+            logger.warn('product not found');
             return res.status(404).json({
-                success:false,
-                message:'products not found'
-            })
+                success: false,
+                message: 'product not found',
+            });
         }
         res.status(200).json({
             success:true,
@@ -67,18 +98,36 @@ const getSellerProducts = async(req,res)=>{
     logger.info('get single product endpoint hit');
     const productId = req.params.id;
     try {
-        const product = await Product.findById(productId).populate('categoryId','name description');
-        if(!product){
+        const sellerProfile = await SellerProfile.findOne({ userId: req.info.userId }).select('_id approvalStatus');
+
+        if (!sellerProfile) {
+            logger.warn('seller profile not found');
+            return res.status(404).json({
+                success: false,
+                message: 'seller profile not found',
+            });
+        }
+        const products = await Product.find({
+            sellerId: sellerProfile._id,
+            isDeleted: false,
+        })
+        .populate('categoryId', 'name description slug parentCategory')
+        .populate('images', 'url publicId')
+        .sort({ createdAt: -1 });
+
+        if(!products){
             logger.warn('products not found');
             return res.status(404).json({
                 success:false,
                 message:'products not found'
             })
         }
+        logger.info('product fetched successfully');
         res.status(200).json({
             success:true,
             message:'fetch all products',
-            product
+            products,
+            sellerApprovalStatus: sellerProfile.approvalStatus,
         })
     } catch (error) {
         logger.error('error while creating product');
@@ -92,10 +141,24 @@ const getSellerProducts = async(req,res)=>{
 const registerProduct = async(req,res)=>{
     logger.info('register product endpoint hit');
     const {name,price,categoryId,stock} = req.body; // get basic product details
-    const files = req.files; //get images of product
+    const files = req.files || []; //get images of product
     const userId = req.info.userId; //get sellerId
     try {
-        const sellerId = await SellerProfile.findById(userId).select('_id');
+        const sellerProfile = await SellerProfile.findOne({ userId }).populate('userId', 'email name');
+        if (!sellerProfile) {
+            logger.warn('seller profile not found');
+            return res.status(404).json({ 
+                success: false, 
+                message: 'seller profile not found' 
+            });
+        }
+        if (sellerProfile.approvalStatus !== 'verified') {
+            logger.warn('seller account is not verified yet');
+           return res.status(403).json({ 
+            success: false, 
+            message: 'seller account is not verified yet' 
+        });
+        }
         // check category existance
         const category = await Category.findById(categoryId);
         if(!category){
@@ -114,48 +177,45 @@ const registerProduct = async(req,res)=>{
                 message:'user not found'
             })
         }
-        let imageIds = [];
-        // upload all images one by one
-        for (let file of files) {
-        // Upload to Cloudinary 
-        const result = await uploadImage(file.path);
-
-        // Save in DB
-        const image = await Image.create({
-            url: result.url,
-            publicId: result.public_id,
-            uploadedBy: sellerId
-        });
-
-        imageIds.push(image._id);
+        const imageIds = [];
+        for (const file of files) {
+            const result = await uploadImage(file.path);
+            const image = await Image.create({
+                url: result.url,
+                publicId: result.public_id,
+                uploadedBy: sellerProfile._id,
+            });
+            imageIds.push(image._id);
         }
-        const data = {
+
+        const product = new Product({
             name,
-            slug:generateSlug(name),
-            description:req.body.description ||'',
+            slug: generateSlug(name),
+            description: req.body.description || '',
             price,
             discountPrice: req.body.discountPrice || 0,
             categoryId,
-            sellerId,
-            images:imageIds,
-            stock
-        }
-        const product = new Product(data);
+            sellerId: sellerProfile._id,
+            images: imageIds,
+            stock,
+        });
+
         await product.save();
         logger.info('product registration successfully');
         await productregisterEmailhelper(user.email, user.name, name);
         res.status(201).json({
-            success:true,
-            message:'product registration successfully',
-        })
+            success: true,
+            message: 'product registration successfully',
+            product,
+        });
     } catch (error) {
-        logger.error('error while creating product');
+        logger.error('error while creating product', error);
         res.status(500).json({
-            success:false,
-            message:'Internal server error'
-        })
+            success: false,
+            message: 'Internal server error',
+        });
     }
-}
+};
 
 // update product
 const updateProduct = async(req,res)=>{
@@ -168,40 +228,45 @@ const updateProduct = async(req,res)=>{
                 message: "Invalid product ID",
             });
         }
-        const product = await Product.findById(productId)
-            .populate({
-                path: "sellerId",
-                populate: {
-                    path: "userId",
-                    select: "name email"
-                }
+        const sellerProfile = await SellerProfile.findOne({ userId: req.info.userId }).select('_id');
+        const product = await Product.findById(productId);
+
+        if (req.info.role === 'seller' && (!sellerProfile || product.sellerId.toString() !== sellerProfile._id.toString())) {
+            logger.warn('You can update only your own products');
+            return res.status(403).json({ 
+                success: false, 
+                message: 'You can update only your own products' 
             });
-        const data={
-            price:req.body.price || product.price,
-            discountPrice:req.body.discountPrice || product.discountPrice,
-            stock:req.body.stock || product.stock,
-            description:req.body.description || product.description
         }
-        const updatedProduct = await product.findByIdAndUpdate(productId,data,{new:true});
-        logger.warn('update product failed')
-        if(!updatedProduct) {
-            return res.status(400).json({
-                success:false,
-                message:'updation failed'
-            })
+
+        const updates = {};
+        ['price', 'discountPrice', 'stock', 'description', 'name'].forEach((field) => {
+        if (req.body[field] !== undefined) {
+            updates[field] = req.body[field];
         }
+        });
+
+        if (updates.name) {
+            updates.slug = generateSlug(updates.name);
+        }
+
+        const updatedProduct = await Product.findByIdAndUpdate(productId, updates, { new: true })
+        .populate('categoryId', 'name description slug parentCategory')
+        .populate('images', 'url publicId');
+
+        logger.info('product update successfully');
         res.status(200).json({
-            success:true,
-            message:'product update successfully',
-        })
+            success: true,
+            message: 'product update successfully',
+            product: updatedProduct,
+        });
     } catch (error) {
-        logger.error('error while updating product');
-        res.status(500).json({
-            success:false,
-            message:'Internal server error'
-        })
+        logger.error('error while updating product', error);
+        res.status(500).json({ 
+            success: false, 
+            message: 'Internal server error' });
     }
-}
+};
 
 // delete product
 const deleteProduct = async (req, res) => {
@@ -212,8 +277,14 @@ const deleteProduct = async (req, res) => {
   const userRole = req.info.role;    // "admin" | "seller"
   const { reason } = req.body;
   try {
-    const sellerId = await SellerProfile.findById(userId).select('_id');
-    const product = await Product.findById(productId);
+    const sellerProfile = await SellerProfile.findOne({ userId }).select('_id');
+    const product = await Product.findById(productId).populate({
+      path: 'sellerId',
+      populate: {
+        path: 'userId',
+        select: 'name email',
+      },
+    });
     if (!product) {
       logger.warn('product not found');
       return res.status(404).json({
@@ -222,17 +293,9 @@ const deleteProduct = async (req, res) => {
       });
     }
 
-    // SELLER OWNERSHIP CHECK
-    if (userRole === "seller") {
-      if (!product.sellerId) {
-        logger.error('product missing sellerId field');
-        return res.status(500).json({
-          success: false,
-          message: 'Product data integrity issue'
-        });
-      }
 
-      if (product.sellerId.toString() !== sellerId.toString()) {
+      if (userRole === 'seller') {
+      if (!sellerProfile || product.sellerId._id.toString() !== sellerProfile._id.toString()) {
         logger.warn('seller trying to delete another seller product');
         return res.status(403).json({
           success: false,

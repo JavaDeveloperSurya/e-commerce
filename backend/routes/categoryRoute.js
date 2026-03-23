@@ -4,11 +4,10 @@ const {authenticate,adminAuth} = require('../middleware/authMiddleware');
 const {createCategory,getAllCategories,getSingleCategory,updateCategory,deleteCategory} = require('../controllers/categoryController');
 
 
-router.use(authenticate,adminAuth);
-router.post('/category',createCategory);
-router.get('/categories/all',getAllCategories);
-router.get('/category/:id',getSingleCategory);
-router.put('/category/:id/update',updateCategory);
-router.delete('/category/:id/delete',deleteCategory); 
+router.get('/categories/all', getAllCategories);
+router.get('/category/:id', getSingleCategory);
+router.post('/category', authenticate, adminAuth, createCategory);
+router.put('/category/:id/update', authenticate, adminAuth, updateCategory);
+router.delete('/category/:id/delete', authenticate, adminAuth, deleteCategory);
 
 module.exports = router;

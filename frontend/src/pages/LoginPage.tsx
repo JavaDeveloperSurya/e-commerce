@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -18,10 +18,11 @@ const LoginPage = () => {
   const [otpToken, setOtpToken] = useState('');
   const [loading, setLoading] = useState(false);
 
-  if (isAuthenticated) {
-    navigate('/');
-    return null;
-  }
+  useEffect(() => {
+    if (isAuthenticated) navigate('/');
+  }, [isAuthenticated, navigate]);
+
+  if (isAuthenticated) return null;
 
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

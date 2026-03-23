@@ -3,10 +3,9 @@ const router = express.Router();
 const {authenticate,buyerAuth} = require('../middleware/authMiddleware');
 const {addReview,getReview,updateReview,deleteReview} = require('../controllers/reviewController');
 
-router.use(authenticate,buyerAuth);
-router.post('/add',addReview);
-router.get('/product/:productId',getReview);
-router.put('/update/:id',updateReview);
-router.delete('/delete/:id',deleteReview);
+router.get('/product/:productId', getReview);
+router.post('/add', authenticate, buyerAuth, addReview);
+router.put('/update/:id', authenticate, buyerAuth, updateReview);
+router.delete('/delete/:id', authenticate, buyerAuth, deleteReview);
 
 module.exports = router;

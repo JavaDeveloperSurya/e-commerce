@@ -2855,3 +2855,392 @@
 {"level":"info","message":"get seller-profile endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:07:59.298Z"}
 {"level":"info","message":"seller profile retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:07:59.548Z"}
 {"level":"info","message":"GET /api/seller/profile 304 - - 424.322 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:07:59.551Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T12:08:32.036Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T12:08:32.174Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:08:32.640Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T12:08:32.656Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T12:08:32.688Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T12:08:34.377Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.869Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.877Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.879Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.881Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.883Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.917Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.920Z"}
+{"level":"info","message":"admin and seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.921Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.928Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.931Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.932Z"}
+{"level":"warn","message":"admin authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.932Z"}
+{"level":"info","message":"GET /api/admin/categories/all 403 69 - 8.956 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.939Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.948Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.951Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.952Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.952Z"}
+{"level":"info","message":"get pending payment endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.953Z"}
+{"level":"warn","message":"products not found","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.975Z"}
+{"level":"info","message":"GET /api/product/seller/my-products 404 48 - 109.407 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:28.978Z"}
+{"level":"info","message":"pending payments fetched","service":"e_commerce-api","timestamp":"2026-03-23T12:10:29.054Z"}
+{"level":"info","message":"GET /api/secure/pending 304 - - 146.374 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:29.057Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:29.127Z"}
+{"level":"info","message":"get seller-profile endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:29.128Z"}
+{"level":"info","message":"seller profile retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:29.405Z"}
+{"level":"info","message":"GET /api/seller/profile 304 - - 492.380 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:29.410Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.853Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.856Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.856Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.857Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.857Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.865Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.870Z"}
+{"level":"info","message":"admin and seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.870Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.874Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.877Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.878Z"}
+{"level":"warn","message":"admin authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.879Z"}
+{"level":"info","message":"GET /api/admin/categories/all 403 69 - 6.183 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.881Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.884Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.887Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.888Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.889Z"}
+{"level":"info","message":"get pending payment endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.890Z"}
+{"level":"info","message":"pending payments fetched","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.972Z"}
+{"level":"info","message":"GET /api/secure/pending 304 - - 112.524 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.975Z"}
+{"level":"warn","message":"products not found","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.976Z"}
+{"level":"info","message":"GET /api/product/seller/my-products 404 48 - 125.377 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:37.978Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:38.059Z"}
+{"level":"info","message":"get seller-profile endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:38.089Z"}
+{"level":"info","message":"seller profile retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:38.348Z"}
+{"level":"info","message":"GET /api/seller/profile 304 - - 484.424 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:38.350Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.937Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.942Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.944Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.944Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.945Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.958Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.962Z"}
+{"level":"info","message":"admin and seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.963Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.968Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.971Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.971Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.972Z"}
+{"level":"info","message":"get pending payment endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.973Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.978Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.982Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.982Z"}
+{"level":"warn","message":"admin authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.983Z"}
+{"level":"info","message":"GET /api/admin/categories/all 403 69 - 6.535 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:45.986Z"}
+{"level":"warn","message":"products not found","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.016Z"}
+{"level":"info","message":"GET /api/product/seller/my-products 404 48 - 81.267 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.019Z"}
+{"level":"info","message":"pending payments fetched","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.053Z"}
+{"level":"info","message":"GET /api/secure/pending 304 - - 104.413 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.057Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.112Z"}
+{"level":"info","message":"get seller-profile endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.113Z"}
+{"level":"info","message":"seller profile retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.363Z"}
+{"level":"info","message":"GET /api/seller/profile 304 - - 407.011 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:10:46.365Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T12:20:05.063Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T12:20:05.196Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:05.870Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T12:20:05.898Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T12:20:05.917Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.213Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.226Z"}
+{"level":"info","message":"admin and user auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.229Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.635Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.645Z"}
+{"level":"info","message":"admin and user auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.653Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.658Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:07.672Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T12:20:08.458Z"}
+{"level":"info","message":"user authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.300Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.300Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.667Z"}
+{"level":"info","message":"GET /api/users/profile 304 - - 2483.123 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.676Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.750Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.752Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.754Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.754Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.755Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.767Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.769Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.770Z"}
+{"level":"warn","message":"admin authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.771Z"}
+{"level":"info","message":"GET /api/admin/categories/all 403 69 - 6.316 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.775Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.781Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.785Z"}
+{"level":"info","message":"admin and seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.786Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.792Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.798Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.800Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.801Z"}
+{"level":"info","message":"get pending payment endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.802Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.821Z"}
+{"level":"info","message":"GET /api/users/profile 304 - - 2195.838 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.825Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.895Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.898Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.899Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.900Z"}
+{"level":"info","message":"get pending sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.901Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.905Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.909Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.911Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.911Z"}
+{"level":"info","message":"get all sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.913Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.934Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.938Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.938Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.939Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.940Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.944Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.945Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.947Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.948Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.954Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.958Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.959Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.962Z"}
+{"level":"info","message":"get pending products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.964Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.978Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.982Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.983Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.983Z"}
+{"level":"info","message":"fetching all users endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:09.984Z"}
+{"level":"warn","message":"products not found","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.100Z"}
+{"level":"info","message":"GET /api/product/seller/my-products 404 48 - 352.577 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.102Z"}
+{"level":"info","message":"pending payments fetched","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.110Z"}
+{"level":"info","message":"GET /api/secure/pending 304 - - 347.214 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.112Z"}
+{"level":"info","message":"GET /api/admin/categories/all 304 - - 286.933 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.221Z"}
+{"level":"info","message":"pending sellers retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.227Z"}
+{"level":"info","message":"GET /api/admin/sellers/pending 304 - - 333.930 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.229Z"}
+{"level":"info","message":"pending products retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.306Z"}
+{"level":"info","message":"GET /api/admin/products/pending 304 - - 354.080 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.308Z"}
+{"level":"info","message":"GET /api/admin/users 304 - - 340.768 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.320Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.328Z"}
+{"level":"info","message":"get seller-profile endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.330Z"}
+{"level":"info","message":"GET /api/admin/sellers 304 - - 474.568 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.380Z"}
+{"level":"info","message":"seller profile retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.515Z"}
+{"level":"info","message":"GET /api/seller/profile 304 - - 737.485 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:10.519Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.193Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.198Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.199Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.200Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.201Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.205Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.206Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.207Z"}
+{"level":"info","message":"category create endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.209Z"}
+{"level":"info","message":"category created","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.309Z"}
+{"level":"info","message":"POST /api/admin/category 201 58 - 119.054 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.313Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.348Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.353Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.354Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.355Z"}
+{"level":"info","message":"fetching all users endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.356Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.370Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.374Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.376Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.380Z"}
+{"level":"info","message":"get pending sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.387Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.405Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.409Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.410Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.414Z"}
+{"level":"info","message":"get all sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.416Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.423Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.429Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.433Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.438Z"}
+{"level":"info","message":"get pending products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.440Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.455Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.458Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.459Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.460Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.461Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.471Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.472Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.473Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.475Z"}
+{"level":"info","message":"GET /api/admin/users 304 - - 154.653 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.503Z"}
+{"level":"info","message":"pending sellers retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.510Z"}
+{"level":"info","message":"GET /api/admin/sellers/pending 304 - - 146.186 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.521Z"}
+{"level":"info","message":"pending products retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.547Z"}
+{"level":"info","message":"GET /api/admin/products/pending 304 - - 131.120 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.556Z"}
+{"level":"info","message":"GET /api/admin/categories/all 200 560 - 261.224 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.717Z"}
+{"level":"info","message":"GET /api/admin/sellers 304 - - 320.874 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:20:31.727Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T12:28:11.019Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T12:28:11.208Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:28:11.775Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T12:28:11.789Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T12:28:11.806Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T12:28:13.357Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-23T12:28:20.013Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-23T12:28:20.129Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:28:20.597Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-23T12:28:20.611Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-23T12:28:20.623Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-02.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-23T12:28:21.741Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:28.401Z"}
+{"level":"warn","message":"authentication failed, token expired","service":"e_commerce-api","timestamp":"2026-03-23T12:29:28.412Z"}
+{"level":"info","message":"POST /api/admin/category 401 65 - 22.859 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:28.425Z"}
+{"level":"info","message":"refresgh token endpoint hit...","service":"e_commerce-api","timestamp":"2026-03-23T12:29:28.455Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T12:29:28.819Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bf99f202be5d354b026f6e","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.332Z"}
+{"level":"info","message":"token refreshed sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.534Z"}
+{"level":"info","message":"POST /api/auth/refresh 200 356 - 1097.008 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.536Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.564Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.569Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.569Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.570Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.571Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.574Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.575Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.576Z"}
+{"level":"info","message":"category create endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.577Z"}
+{"level":"info","message":"category created","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.740Z"}
+{"level":"info","message":"POST /api/admin/category 201 58 - 178.506 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.743Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.775Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.779Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.782Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.784Z"}
+{"level":"info","message":"fetching all users endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.786Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.796Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.802Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.803Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.804Z"}
+{"level":"info","message":"get all sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.806Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.812Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.817Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.818Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.819Z"}
+{"level":"info","message":"get pending sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.820Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.824Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.829Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.831Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.832Z"}
+{"level":"info","message":"get pending products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.834Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.839Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.843Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.844Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.845Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.846Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.852Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.853Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.853Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.855Z"}
+{"level":"info","message":"GET /api/admin/users 304 - - 97.749 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.874Z"}
+{"level":"info","message":"pending sellers retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.899Z"}
+{"level":"info","message":"GET /api/admin/sellers/pending 304 - - 89.177 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.902Z"}
+{"level":"info","message":"pending products retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.905Z"}
+{"level":"info","message":"GET /api/admin/products/pending 304 - - 82.530 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.908Z"}
+{"level":"info","message":"GET /api/admin/sellers 304 - - 178.931 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:29.975Z"}
+{"level":"info","message":"GET /api/admin/categories/all 200 338 - 186.293 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:30.026Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:58.840Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:58.844Z"}
+{"level":"info","message":"admin and user auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:58.845Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:58.845Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:58.852Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.132Z"}
+{"level":"info","message":"GET /api/users/profile 304 - - 299.164 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.135Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.181Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.187Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.188Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.188Z"}
+{"level":"info","message":"get pending sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.189Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.193Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.197Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.198Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.198Z"}
+{"level":"info","message":"fetching all users endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.199Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.206Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.209Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.209Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.210Z"}
+{"level":"info","message":"get all sellers endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.211Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.218Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.221Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.221Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.222Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.223Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.226Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.226Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.227Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.227Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.235Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.238Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.238Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.238Z"}
+{"level":"info","message":"get pending products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.239Z"}
+{"level":"info","message":"pending sellers retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.251Z"}
+{"level":"info","message":"GET /api/admin/sellers/pending 304 - - 71.544 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.253Z"}
+{"level":"info","message":"GET /api/admin/users 304 - - 111.674 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.305Z"}
+{"level":"info","message":"pending products retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.311Z"}
+{"level":"info","message":"GET /api/admin/products/pending 304 - - 78.611 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.315Z"}
+{"level":"info","message":"GET /api/admin/categories/all 304 - - 157.239 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.375Z"}
+{"level":"info","message":"GET /api/admin/sellers 304 - - 539.492 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:29:59.747Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:21.337Z"}
+{"level":"warn","message":"authentication failed, token expired","service":"e_commerce-api","timestamp":"2026-03-23T12:30:21.345Z"}
+{"level":"info","message":"GET /api/users/profile 401 65 - 45.719 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:21.386Z"}
+{"level":"info","message":"refresgh token endpoint hit...","service":"e_commerce-api","timestamp":"2026-03-23T12:30:21.478Z"}
+{"level":"info","message":"Generating tokens for user: kumarsurya45394@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T12:30:21.763Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bff5fc3b15523e70338269","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.040Z"}
+{"level":"info","message":"token refreshed sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.117Z"}
+{"level":"info","message":"POST /api/auth/refresh 200 361 - 645.262 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.119Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.132Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.136Z"}
+{"level":"info","message":"admin and user auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.136Z"}
+{"level":"info","message":"user authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.200Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.201Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.284Z"}
+{"level":"info","message":"GET /api/users/profile 304 - - 159.100 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.286Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.391Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.395Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.396Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.397Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.399Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.408Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.412Z"}
+{"level":"info","message":"admin and seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.413Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.420Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.424Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.424Z"}
+{"level":"warn","message":"admin authorization failed","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.425Z"}
+{"level":"info","message":"GET /api/admin/categories/all 403 69 - 6.378 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.427Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.434Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.438Z"}
+{"level":"info","message":"seller auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.439Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.440Z"}
+{"level":"info","message":"get pending payment endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.441Z"}
+{"level":"warn","message":"products not found","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.581Z"}
+{"level":"info","message":"GET /api/product/seller/my-products 404 48 - 192.535 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.584Z"}
+{"level":"info","message":"pending payments fetched","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.591Z"}
+{"level":"info","message":"GET /api/secure/pending 304 - - 188.552 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.594Z"}
+{"level":"info","message":"seller authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.668Z"}
+{"level":"info","message":"get seller-profile endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.670Z"}
+{"level":"info","message":"seller profile retrieved successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.863Z"}
+{"level":"info","message":"GET /api/seller/profile 304 - - 457.901 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:30:22.867Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.361Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.364Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.365Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.366Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.366Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.372Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.374Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.376Z"}
+{"level":"info","message":"delete category endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.378Z"}
+{"level":"info","message":"DELETE /api/admin/category/69c13229421893a930dc6cfe/delete 401 71 - 18.492 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.381Z"}
+{"level":"info","message":"refresgh token endpoint hit...","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.397Z"}
+{"level":"info","message":"Generating tokens for user: mrrajprasad5@gmail.com","service":"e_commerce-api","timestamp":"2026-03-23T12:32:18.709Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bf99f202be5d354b026f6e","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.015Z"}
+{"level":"info","message":"token refreshed sucessfully","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.117Z"}
+{"level":"info","message":"POST /api/auth/refresh 200 356 - 724.115 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.120Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.129Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.132Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.134Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.136Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.138Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.142Z"}
+{"level":"info","message":"admin auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.143Z"}
+{"level":"info","message":"admin authenticated","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.144Z"}
+{"level":"info","message":"delete category endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.145Z"}
+{"level":"info","message":"DELETE /api/admin/category/69c13229421893a930dc6cfe/delete 401 71 - 18.502 ms","service":"e_commerce-api","timestamp":"2026-03-23T12:32:19.148Z"}
