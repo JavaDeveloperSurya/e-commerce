@@ -250,12 +250,13 @@ export const adminApi = {
 
 // Category APIs (Admin)
 export const categoryApi = {
-  create: (data: { name: string; description: string }) => api('/admin/category', { method: 'POST', body: data }),
+  create: (data: { name: string; description: string; parentCategory?: string | null }) => api('/admin/category', { method: 'POST', body: data }),
   getAll: () => api<AdminCategoriesResponse>('/admin/categories/all'),
   getById: (id: string) => api<Category>(`/admin/category/${id}`),
   update: (id: string, data: Partial<Category>) => api(`/admin/category/${id}/update`, { method: 'PUT', body: data }),
   delete: (id: string) => api(`/admin/category/${id}/delete`, { method: 'DELETE' }),
 };
+
 
 // Health check
 export const healthCheck = () => api('/health');

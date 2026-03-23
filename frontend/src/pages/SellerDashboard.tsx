@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { sellerApi, productApi, orderApi, paymentApi } from '@/lib/api';
+import { sellerApi, productApi, orderApi, paymentApi, categoryApi } from '@/lib/api';
 import { useAuth } from '@/contexts/AuthContext';
 import { PageLoader, ButtonSpinner } from '@/components/Spinner';
 import { Button } from '@/components/ui/button';
@@ -8,8 +8,9 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Package, Plus, Edit, Trash2, CreditCard, Store, CheckCircle, XCircle } from 'lucide-react';
+import { Package, Plus, Trash2, CreditCard, Store, CheckCircle, XCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import type { Category } from '@/lib/types';
 
 const SellerDashboard = () => {
   const { user, refreshProfile } = useAuth();
@@ -17,6 +18,7 @@ const SellerDashboard = () => {
   const navigate = useNavigate();
   const [tab, setTab] = useState('products');
   const [products, setProducts] = useState<any[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const [pendingPayments, setPendingPayments] = useState<any[]>([]);
   const [sellerProfile, setSellerProfile] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -35,15 +37,19 @@ const SellerDashboard = () => {
   const fetchData = async () => {
     setLoading(true);
     try {
-      const [prods, payments, profile] = await Promise.all([
+       const [prods, payments, profile, categoryData] = await Promise.all([
         sellerApi.getMyProducts().catch(() => ({ products: [] })),
         paymentApi.getPending().catch(() => ({ payments: [] })),
         sellerApi.getProfile().catch(() => null),
+        categoryApi.getAll().catch(() => ({ categories: [] })),
       ]);
-      setProducts(prods.products || prods.data || []);
-      setPendingPayments(payments.payments || payments.data || []);
-      setSellerProfile(profile?.seller || profile?.data || profile);
-    } catch { /* ignore */ }
+      setProducts(prods.products || []);
+      setPendingPayments(payments.payments || []);
+      setSellerProfile(profile?.seller || profile);
+    setCategories(categoryData.categories || []);
+    } catch {
+      // ignore
+    }
     setLoading(false);
   };
 
@@ -172,7 +178,22 @@ const SellerDashboard = () => {
             <form onSubmit={handleCreateProduct} className="rounded-lg border bg-card p-5 mb-6 space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div><Label>Product Name</Label><Input value={productForm.name} onChange={e => setProductForm(p => ({ ...p, name: e.target.value }))} required className="mt-1" /></div>
-                <div><Label>Category ID</Label><Input value={productForm.categoryId} onChange={e => setProductForm(p => ({ ...p, categoryId: e.target.value }))} required className="mt-1" placeholder="MongoDB ObjectId" /></div>
+                 <div>
+                  <Label>Category</Label>
+                  <select
+                    value={productForm.categoryId}
+                    onChange={e => setProductForm(p => ({ ...p, categoryId: e.target.value }))}
+                    required
+                    className="mt-1 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  >
+                    <option value="">Select category</option>
+                    {categories.map(category => (
+                      <option key={category._id} value={category._id}>
+                        {category.parentCategory?.name ? `${category.parentCategory.name} → ${category.name}` : category.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
                 <div><Label>Price (₹)</Label><Input type="number" value={productForm.price} onChange={e => setProductForm(p => ({ ...p, price: e.target.value }))} required className="mt-1" /></div>
                 <div><Label>Discount Price (₹)</Label><Input type="number" value={productForm.discountPrice} onChange={e => setProductForm(p => ({ ...p, discountPrice: e.target.value }))} className="mt-1" /></div>
                 <div><Label>Stock</Label><Input type="number" value={productForm.stock} onChange={e => setProductForm(p => ({ ...p, stock: e.target.value }))} required className="mt-1" /></div>

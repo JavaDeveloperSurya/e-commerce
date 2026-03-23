@@ -32,8 +32,8 @@ const createCategory = async(req,res)=>{
 const getAllCategories = async(req,res)=>{
     logger.info('get all categories endpoint hit');
     try {
-        const categories = await Category.find({}).populate('parentCategory');
-        if(categories){
+         const categories = await Category.find({}).populate('parentCategory','name slug');
+        if(!categories){
             logger.warn('category not found');
             return res.status(404).json({
                 success:false,
@@ -59,8 +59,8 @@ const getSingleCategory = async(req,res)=>{
     logger.info('get single category endpoint hit');
     const categoryId = req.params.id;
     try {
-        const category = await Category.findById(categoryId).populate('parentCategory');
-        if(category){
+         const category = await Category.find({}).populate('parentCategory','name slug');
+        if(!category){
             logger.warn('category not found');
             return res.status(404).json({
                 success:false,

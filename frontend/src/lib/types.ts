@@ -33,11 +33,18 @@ export interface User {
   isBlocked?: boolean;
 }
 
+export interface CategorySummary {
+  _id: string;
+  name: string;
+  slug?: string;
+}
+
 export interface Category {
   _id: string;
   name: string;
   slug?: string;
   description?: string;
+  parentCategory?: CategorySummary | null;
   isActive?: boolean;
 }
 
