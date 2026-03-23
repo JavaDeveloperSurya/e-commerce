@@ -4,7 +4,7 @@ const Image =require('../models/Image');
 const User = require('../models/User');
 const Category = require('../models/Category');
 const generateSlug = require('../services/generateSlugByName');
-const productregisterEmailhelper = require('../utils/product-email-helper');
+const {productregisterEmailhelper,sellerProductDeletionEmailHelper,adminProductDeletionEmailHelper} = require('../utils/product-email-helper');
 const {uploadImage} = require('../services/imageUploadService');
 const mongoose = require('mongoose');
 const SellerProfile = require('../models/SellerProfile');
@@ -140,6 +140,7 @@ const getSellerProducts = async(req,res)=>{
 // create product
 const registerProduct = async(req,res)=>{
     logger.info('register product endpoint hit');
+    console.log(req.body)
     const {name,price,categoryId,stock} = req.body; // get basic product details
     const files = req.files || []; //get images of product
     const userId = req.info.userId; //get sellerId
@@ -159,6 +160,7 @@ const registerProduct = async(req,res)=>{
             message: 'seller account is not verified yet' 
         });
         }
+
         // check category existance
         const category = await Category.findById(categoryId);
         if(!category){
@@ -168,7 +170,7 @@ const registerProduct = async(req,res)=>{
                 message:'category not found'
             })
         }
-        const user = await User.findById(sellerId);
+        const user = await User.findById(userId);
         // check user existance
         if(!user){
             logger.warn('user not found');
@@ -179,7 +181,9 @@ const registerProduct = async(req,res)=>{
         }
         const imageIds = [];
         for (const file of files) {
+            console.log(file)
             const result = await uploadImage(file.path);
+            console.log(result)
             const image = await Image.create({
                 url: result.url,
                 publicId: result.public_id,

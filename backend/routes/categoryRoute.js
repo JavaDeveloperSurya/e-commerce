@@ -4,7 +4,7 @@ const {authenticate,adminAuth} = require('../middleware/authMiddleware');
 const {createCategory,getAllCategories,getSingleCategory,updateCategory,deleteCategory} = require('../controllers/categoryController');
 
 
-router.get('/categories/all', getAllCategories);
+router.get('/categories', getAllCategories);
 router.get('/category/:id', getSingleCategory);
 router.post('/category', authenticate, adminAuth, createCategory);
 router.put('/category/:id/update', authenticate, adminAuth, updateCategory);

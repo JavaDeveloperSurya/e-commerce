@@ -1,6 +1,6 @@
 const logger = require('../utils/logger');
 const Product = require('../models/Product');
-const productApprovalStatusEmailHelper = require('../utils/product-email-helper');
+const {productApprovalStatusEmailHelper} = require('../utils/product-email-helper');
 const mongoose = require('mongoose');
 
 // get pending products
@@ -59,7 +59,7 @@ const verifyProduct = async(req,res)=>{
                 message: "Product already approved",
             });
         }
-        if (!seller) {
+        if (!product.sellerId || !product.sellerId.userId) {
             logger.warn("seller not found");
             return res.status(404).json({
                 success: false,

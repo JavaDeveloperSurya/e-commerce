@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo,useState } from 'react';
 import { sellerApi, productApi, orderApi, paymentApi, categoryApi } from '@/lib/api';
 import { useAuth } from '@/contexts/AuthContext';
 import { PageLoader, ButtonSpinner } from '@/components/Spinner';
@@ -22,6 +22,7 @@ const SellerDashboard = () => {
   const [pendingPayments, setPendingPayments] = useState<any[]>([]);
   const [sellerProfile, setSellerProfile] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [categoriesLoading, setCategoriesLoading] = useState(false);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
 
   // Product form state
@@ -33,7 +34,17 @@ const SellerDashboard = () => {
   // Seller registration form
   const [regForm, setRegForm] = useState({ shopName: '', shopDescription: '', businessAddress: '', accountNumber: '', ifscCode: '', bankName: '' });
   const [registering, setRegistering] = useState(false);
-
+  const loadCategories = async () => {
+    setCategoriesLoading(true);
+    try {
+      const categoryData = await categoryApi.getAll().catch(() => ({ categories: [], data: [] }));
+      const availableCategories = (categoryData.categories || categoryData.data || []).filter(category => category?.isActive !== false);
+      setCategories(availableCategories);
+      return availableCategories;
+    } finally {
+      setCategoriesLoading(false);
+    }
+  };
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -41,12 +52,12 @@ const SellerDashboard = () => {
         sellerApi.getMyProducts().catch(() => ({ products: [] })),
         paymentApi.getPending().catch(() => ({ payments: [] })),
         sellerApi.getProfile().catch(() => null),
-        categoryApi.getAll().catch(() => ({ categories: [] })),
+        categoryApi.getAll().catch(() => ({ categories: [], data: [] })),
       ]);
-      setProducts(prods.products || []);
-      setPendingPayments(payments.payments || []);
-      setSellerProfile(profile?.seller || profile);
-    setCategories(categoryData.categories || []);
+      setProducts(prods.products  || []);
+      setPendingPayments(payments.payments  || []);
+      setSellerProfile(profile?.seller || profile?.data || profile);
+      setCategories((categoryData.categories || categoryData.data || []).filter(category => category?.isActive !== false));
     } catch {
       // ignore
     }
@@ -54,7 +65,29 @@ const SellerDashboard = () => {
   };
 
   useEffect(() => { fetchData(); }, []);
+  const sortedCategories = useMemo(() => (
+    [...categories].sort((a, b) => {
+      const aLabel = a.parentCategory?.name ? `${a.parentCategory.name} ${a.name}` : a.name;
+      const bLabel = b.parentCategory?.name ? `${b.parentCategory.name} ${b.name}` : b.name;
+      return aLabel.localeCompare(bLabel);
+    })
+  ), [categories]);
 
+  const handleToggleProductForm = async () => {
+    const nextShowState = !showProductForm;
+    setShowProductForm(nextShowState);
+
+    if (!nextShowState) return;
+
+    const availableCategories = await loadCategories();
+    if (availableCategories.length === 0) {
+      toast({
+        title: 'No categories available',
+        description: 'Please ask an admin to create an active category before adding a product.',
+        variant: 'destructive',
+      });
+    }
+  };
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setRegistering(true);
@@ -169,7 +202,7 @@ const SellerDashboard = () => {
         <TabsContent value="products">
           <div className="flex justify-between items-center mb-4">
             <h3 className="font-semibold text-foreground">My Products</h3>
-            <Button size="sm" onClick={() => setShowProductForm(!showProductForm)}>
+            <Button size="sm" onClick={handleToggleProductForm}>
               <Plus className="mr-1 h-4 w-4" />{showProductForm ? 'Cancel' : 'Add Product'}
             </Button>
           </div>
@@ -184,15 +217,19 @@ const SellerDashboard = () => {
                     value={productForm.categoryId}
                     onChange={e => setProductForm(p => ({ ...p, categoryId: e.target.value }))}
                     required
-                    className="mt-1 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    disabled={categories.length === 0}
+                    className="mt-1 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    <option value="">Select category</option>
-                    {categories.map(category => (
+                    <option value="">{categoriesLoading ? 'Loading categories...' : 'Select category'}</option>
+                    {sortedCategories.map(category => (
                       <option key={category._id} value={category._id}>
                         {category.parentCategory?.name ? `${category.parentCategory.name} → ${category.name}` : category.name}
                       </option>
                     ))}
                   </select>
+                  {categories.length === 0 && (
+                    <p className="mt-2 text-xs text-muted-foreground">Create at least one active category from the admin dashboard before adding a product.</p>
+                  )}
                 </div>
                 <div><Label>Price (₹)</Label><Input type="number" value={productForm.price} onChange={e => setProductForm(p => ({ ...p, price: e.target.value }))} required className="mt-1" /></div>
                 <div><Label>Discount Price (₹)</Label><Input type="number" value={productForm.discountPrice} onChange={e => setProductForm(p => ({ ...p, discountPrice: e.target.value }))} className="mt-1" /></div>
@@ -200,7 +237,7 @@ const SellerDashboard = () => {
                 <div><Label>Images (max 5)</Label><input type="file" accept="image/*" multiple onChange={e => setProductImages(e.target.files)} className="mt-1 text-sm" /></div>
               </div>
               <div><Label>Description</Label><Textarea value={productForm.description} onChange={e => setProductForm(p => ({ ...p, description: e.target.value }))} className="mt-1" /></div>
-              <Button type="submit" disabled={creatingProduct}>{creatingProduct && <ButtonSpinner />}Create Product</Button>
+              <Button type="submit" disabled={creatingProduct || categories.length === 0}>{creatingProduct && <ButtonSpinner />}Create Product</Button>
             </form>
           )}
 
