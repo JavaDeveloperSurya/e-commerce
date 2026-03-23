@@ -9,7 +9,7 @@ import { useToast } from '@/hooks/use-toast';
 import { User, Mail, Phone, MapPin, Save } from 'lucide-react';
 
 const ProfilePage = () => {
-  const { user, isLoading, refreshProfile } = useAuth();
+  const { user, activeRole, isLoading, refreshProfile } = useAuth();
   const { toast } = useToast();
   const [saving, setSaving] = useState(false);
   const [form, setForm] = useState({
@@ -62,7 +62,7 @@ const ProfilePage = () => {
             <div>
               <p className="font-semibold text-card-foreground">{user?.name || 'User'}</p>
               <p className="text-sm text-muted-foreground">{user?.email}</p>
-              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary capitalize">{user?.role}</span>
+              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary capitalize">{activeRole || user?.role}</span>
             </div>
           </div>
 

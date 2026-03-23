@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useState } from 'react';
 
 export function Navbar() {
-  const { user, isAuthenticated, logout } = useAuth();
+  const { user, activeRole, isAuthenticated, logout, setActiveRole } = useAuth();
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -56,7 +56,12 @@ export function Navbar() {
                   <Link to="/seller"><Store className="mr-1 h-4 w-4" />Seller</Link>
                 </Button>
               )}
-              {user?.role === 'buyer' && (
+              {user?.role === 'seller' && (
+                <Button variant="outline" size="sm" onClick={() => setActiveRole(activeRole === 'seller' ? 'buyer' : 'seller')}>
+                  Switch to {activeRole === 'seller' ? 'Buyer' : 'Seller'}
+                </Button>
+              )}
+              {(user?.role === 'buyer' || activeRole === 'buyer') && (
                 <>
                   <Button variant="ghost" size="sm" asChild>
                     <Link to="/wishlist"><Heart className="mr-1 h-4 w-4" />Wishlist</Link>
@@ -109,7 +114,12 @@ export function Navbar() {
             <>
               {user?.role === 'admin' && <Link to="/admin" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Admin Dashboard</Link>}
               {(user?.role === 'seller' || user?.role === 'buyer') && <Link to="/seller" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Seller Dashboard</Link>}
-              {user?.role === 'buyer' && (
+              {user?.role === 'seller' && (
+                <button className="block py-2 text-sm" onClick={() => { setActiveRole(activeRole === 'seller' ? 'buyer' : 'seller'); setMobileOpen(false); }}>
+                  Switch to {activeRole === 'seller' ? 'Buyer' : 'Seller'} Mode
+                </button>
+              )}
+              {(user?.role === 'buyer' || activeRole === 'buyer') && (
                 <>
                   <Link to="/cart" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Cart</Link>
                   <Link to="/wishlist" className="block py-2 text-sm" onClick={() => setMobileOpen(false)}>Wishlist</Link>

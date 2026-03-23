@@ -45,14 +45,14 @@ const authenticate = async(req,res,next)=>{
 const buyerAuth = async(req,res,next)=>{
     logger.info('buyer auth middleware endpoint hit');
     try {
-        if(req.info.role == 'buyer'){
-            logger.info('buyer authenticated');
+        if(req.info.role == 'buyer' || req.info.role == 'seller'){
+            logger.info('buyer-compatible account authenticated');
             return next();
         }
         logger.warn('buyer authorization failed');
         res.status(403).json({
             success:false,
-            message:'buyer access only, authorization failed'
+            message:'buyer or seller access only, authorization failed'
         })
     } catch (error) {
         logger.error('buyer authentication failed: ',error);

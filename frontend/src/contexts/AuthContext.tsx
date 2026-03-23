@@ -2,10 +2,14 @@ import React, { createContext, useContext, useState, useEffect, useCallback, typ
 import { authApi, userApi } from '@/lib/api';
 import type { User } from '../lib/types';
 
+type AppRole = 'buyer' | 'seller' | 'admin';
 interface AuthContextType {
   user: User | null;
   isLoading: boolean;
   isAuthenticated: boolean;
+  activeRole: AppRole | null;
+  availableRoles: AppRole[];
+  setActiveRole: (role: AppRole) => void;
   login: (email: string) => Promise<{ token: string }>;
   verifyOtp: (token: string, otp: string) => Promise<void>;
   resendOtp: (token: string) => Promise<void>;
@@ -14,31 +18,65 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
+const ACTIVE_ROLE_KEY = 'activeRole';
 
+function getAvailableRoles(user: User | null): AppRole[] {
+  if (!user) return [];
+  if (user.role === 'seller') return ['buyer', 'seller'];
+  return [user.role];
+}
+
+function getDefaultRole(user: User | null): AppRole | null {
+  if (!user) return null;
+  return user.role === 'seller' ? 'seller' : user.role;
+}
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [activeRole, setActiveRoleState] = useState<AppRole | null>(null);
 
+  const syncActiveRole = useCallback((nextUser: User | null) => {
+    const roles = getAvailableRoles(nextUser);
+    const storedRole = localStorage.getItem(ACTIVE_ROLE_KEY) as AppRole | null;
+    const nextRole = storedRole && roles.includes(storedRole) ? storedRole : getDefaultRole(nextUser);
+
+    setActiveRoleState(nextRole);
+
+    if (nextRole) {
+      localStorage.setItem(ACTIVE_ROLE_KEY, nextRole);
+    } else {
+      localStorage.removeItem(ACTIVE_ROLE_KEY);
+    }
+  }, [])
   const fetchProfile = useCallback(async () => {
     try {
       const token = localStorage.getItem('accessToken');
       if (!token) {
         setUser(null);
+        syncActiveRole(null);
         return;
       }
       const data = await userApi.getProfile();
-       setUser(data.user || data.data || null);
+       const nextUser = data.user || data.data || null;
+      setUser(nextUser);
+      syncActiveRole(nextUser);
     } catch {
       setUser(null);
       localStorage.removeItem('accessToken');
       localStorage.removeItem('refreshToken');
     }
-  }, []);
+  }, [syncActiveRole]);
 
   useEffect(() => {
     fetchProfile().finally(() => setIsLoading(false));
   }, [fetchProfile]);
-
+  const setActiveRole = (role: AppRole) => {
+    if (!user) return;
+    const roles = getAvailableRoles(user);
+    if (!roles.includes(role)) return;
+    setActiveRoleState(role);
+    localStorage.setItem(ACTIVE_ROLE_KEY, role);
+  };
   const login = async (email: string) => {
     const data = await authApi.login(email);
     return { token: data.Token || data.token || '' };
@@ -65,13 +103,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     localStorage.removeItem('refreshToken');
     setUser(null);
   };
-
+  const availableRoles = getAvailableRoles(user);
   return (
     <AuthContext.Provider
       value={{
         user,
         isLoading,
         isAuthenticated: !!user,
+        activeRole,
+        availableRoles,
+        setActiveRole,
         login,
         verifyOtp,
         resendOtp,

@@ -9,11 +9,13 @@ interface ProtectedRouteProps {
 }
 
 export function ProtectedRoute({ children, roles }: ProtectedRouteProps) {
-  const { user, isLoading, isAuthenticated } = useAuth();
+  const { user, activeRole, isLoading, isAuthenticated } = useAuth();
 
   if (isLoading) return <PageLoader />;
   if (!isAuthenticated) return <Navigate to="/login" replace />;
-  if (roles && user && !roles.includes(user.role)) return <Navigate to="/" replace />;
+  
+  const effectiveRole = activeRole || user?.role;
+  if (roles && effectiveRole && !roles.includes(effectiveRole)) return <Navigate to="/" replace />
 
   return <>{children}</>;
 }

@@ -10,7 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ProductDetailPage = () => {
   const { id } = useParams<{ id: string }>();
-  const { user } = useAuth();
+  const { user, activeRole } = useAuth()
   const { toast } = useToast();
   const [product, setProduct] = useState<any>(null);
   const [reviews, setReviews] = useState<any[]>([]);
@@ -30,7 +30,7 @@ const ProductDetailPage = () => {
       reviewApi.getByProduct(id).catch(() => ({ reviews: [] })),
     ]).then(([pData, rData]) => {
       setProduct(pData.product || pData.data || pData);
-      setReviews(rData.reviews || rData.data || []);
+      setReviews(rData.reviews || []);
     }).finally(() => setLoading(false));
   }, [id]);
 
@@ -66,7 +66,7 @@ const ProductDetailPage = () => {
       toast({ title: 'Review submitted!' });
       setReviewText('');
       const rData = await reviewApi.getByProduct(id);
-      setReviews(rData.reviews || rData.data || []);
+      setReviews(rData.reviews || []);
     } catch (err: any) {
       toast({ title: 'Error', description: err.message, variant: 'destructive' });
     } finally {
@@ -137,7 +137,7 @@ const ProductDetailPage = () => {
             </span>
           </div>
 
-          {user?.role === 'buyer' && product.stock > 0 && (
+          {activeRole === 'buyer' && product.stock > 0 && (
             <div className="flex flex-wrap items-center gap-3 mb-6">
               <div className="flex items-center border rounded-lg">
                 <button onClick={() => setQty(Math.max(1, qty - 1))} className="px-3 py-2"><Minus className="h-4 w-4" /></button>
@@ -160,7 +160,7 @@ const ProductDetailPage = () => {
       <section className="border-t pt-8">
         <h2 className="font-display text-xl font-bold text-foreground mb-6">Customer Reviews</h2>
 
-        {user?.role === 'buyer' && (
+        {activeRole === 'buyer' && (
           <form onSubmit={handleReviewSubmit} className="rounded-lg border bg-card p-5 mb-6">
             <h3 className="font-medium mb-3 text-card-foreground">Write a Review</h3>
             <div className="flex items-center gap-2 mb-3">
