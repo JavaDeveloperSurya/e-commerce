@@ -1,17 +1,9 @@
 import { Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import type { Product } from '../lib/types';
 
 interface ProductCardProps {
-  product: {
-    _id: string;
-    name: string;
-    price: number;
-    discountPrice?: number;
-    images?: any[];
-    ratingAverage?: number;
-    ratingCount?: number;
-    stock?: number;
-  };
+  product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
@@ -24,9 +16,9 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       to={`/product/${product._id}`}
-      className="group block rounded-lg border bg-card p-3 shadow-card transition-all hover:shadow-elevated hover:-translate-y-0.5"
+      className="group block rounded-lg border bg-card p-3 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-elevated"
     >
-      <div className="aspect-square overflow-hidden rounded-md bg-muted mb-3">
+      <div className="mb-3 aspect-square overflow-hidden rounded-md bg-muted">
         <img
           src={imageUrl}
           alt={product.name}
@@ -34,8 +26,8 @@ export function ProductCard({ product }: ProductCardProps) {
           loading="lazy"
         />
       </div>
-      <h3 className="text-sm font-medium line-clamp-2 mb-1 text-card-foreground">{product.name}</h3>
-      <div className="flex items-center gap-2 mb-1">
+       <h3 className="mb-1 line-clamp-2 text-sm font-medium text-card-foreground">{product.name}</h3>
+      <div className="mb-1 flex items-center gap-2">
         <span className="text-base font-bold text-foreground">
           ₹{(product.discountPrice || product.price).toLocaleString()}
         </span>

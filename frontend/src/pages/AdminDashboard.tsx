@@ -34,11 +34,11 @@ const AdminDashboard = () => {
         adminApi.getPendingProducts().catch(() => ({ products: [] })),
         categoryApi.getAll().catch(() => ({ categories: [] })),
       ]);
-      setUsers(u.users || u.data || []);
-      setSellers(s.sellers || s.data || []);
-      setPendingSellers(ps.sellers || ps.data || []);
-      setPendingProducts(pp.products || pp.data || []);
-      setCategories(c.categories || c.data || []);
+      setUsers(u.users || []);
+      setSellers(s.sellers || []);
+      setPendingSellers(ps.sellers || []);
+      setPendingProducts(pp.products || []);
+      setCategories(c.categories || []);
     } catch { /* ignore */ }
     setLoading(false);
   };

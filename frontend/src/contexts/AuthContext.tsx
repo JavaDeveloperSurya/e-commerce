@@ -1,16 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, type ReactNode } from 'react';
 import { authApi, userApi } from '@/lib/api';
-
-interface User {
-  _id: string;
-  name?: string;
-  email: string;
-  role: 'buyer' | 'seller' | 'admin';
-  phone?: string;
-  addresses?: any[];
-  isProfileCompleted?: boolean;
-  isBlocked?: boolean;
-}
+import type { User } from '../lib/types';
 
 interface AuthContextType {
   user: User | null;
@@ -32,9 +22,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const fetchProfile = useCallback(async () => {
     try {
       const token = localStorage.getItem('accessToken');
-      if (!token) { setUser(null); return; }
+      if (!token) {
+        setUser(null);
+        return;
+      }
       const data = await userApi.getProfile();
-      setUser(data.user || data.data || data);
+       setUser(data.user || data.data || null);
     } catch {
       setUser(null);
       localStorage.removeItem('accessToken');
@@ -48,7 +41,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const login = async (email: string) => {
     const data = await authApi.login(email);
-    return { token: data.Token || data.token };
+    return { token: data.Token || data.token || '' };
   };
 
   const verifyOtp = async (token: string, otp: string) => {
@@ -63,23 +56,29 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   const logout = async () => {
-    try { await authApi.logout(); } catch { /* ignore */ }
+    try {
+      await authApi.logout();
+    } catch {
+      // ignore logout failure
+    }
     localStorage.removeItem('accessToken');
     localStorage.removeItem('refreshToken');
     setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{
-      user,
-      isLoading,
-      isAuthenticated: !!user,
-      login,
-      verifyOtp,
-      resendOtp,
-      logout,
-      refreshProfile: fetchProfile,
-    }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isLoading,
+        isAuthenticated: !!user,
+        login,
+        verifyOtp,
+        resendOtp,
+        logout,
+        refreshProfile: fetchProfile,
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
