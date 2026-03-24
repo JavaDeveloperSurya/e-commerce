@@ -1,3 +1,4 @@
+const logger = require('../utils/logger');
 const orderEvents = require("../events/orderEvents");
 const sendMail = require('../services/emailService');
 const orderStatusMail = require("../templates/orderStatusOptions");

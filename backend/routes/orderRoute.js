@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const {authenticate,AdminUserAuth,buyerAuth,sellerAuth,adminAuth,AdminSellerAuth} = require('../middleware/authMiddleware');
-const {createOrder,getAllOrders,getUserOrders,getOrderById,updateOrderStatus,cancelOrder,approveOrder,rejectOrder} = require('../controllers/orderController');
+const {authenticate,buyerAuth,sellerAuth,adminAuth,AdminSellerAuth} = require('../middleware/authMiddleware');
+const {createOrder,getAllOrders,getUserOrders,getOrderById,updateOrderStatus,cancelOrder,rejectOrder} = require('../controllers/orderController');
 
 router.use(authenticate);
 router.get('/orders',adminAuth,getAllOrders);

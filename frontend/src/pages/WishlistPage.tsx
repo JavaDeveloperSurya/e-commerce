@@ -14,7 +14,7 @@ const WishlistPage = () => {
   const fetchWishlist = async () => {
     try {
       const data = await wishlistApi.get();
-      setItems(data.wishlist?.items || data.data?.items || data.items || []);
+      setItems(data.wishlist?.items || data.data?.items || data.data?.products || data.items || []);
     } catch (err: any) {
       toast({ title: 'Error', description: err.message, variant: 'destructive' });
     } finally { setLoading(false); }

@@ -66,7 +66,7 @@ const ProductDetailPage = () => {
       toast({ title: 'Review submitted!' });
       setReviewText('');
       const rData = await reviewApi.getByProduct(id);
-      setReviews(rData.reviews || []);
+      setReviews(rData.reviews || rData.data || []);
     } catch (err: any) {
       toast({ title: 'Error', description: err.message, variant: 'destructive' });
     } finally {

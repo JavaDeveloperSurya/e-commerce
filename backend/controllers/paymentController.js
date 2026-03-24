@@ -3,12 +3,24 @@ const Payment = require('../models/Payment');
 const Order = require('../models/Order');
 const User = require('../models/User');
 const mongoose = require('mongoose');
+const orderEvents = require('../events/orderEvents');
+// create payment
+const emitOrderStatusChanged = async ({ actorUserId, order }) => {
+  const user = await User.findById(actorUserId);
+  if (!user || !order) return;
 
+  orderEvents.emit('order.status.changed', {
+    email: user.email,
+    name: user.name,
+    orderId: order._id,
+    status: order.orderStatus,
+  });
+};
 // create payment
 const createPayment = async (req, res) => {
     logger.info('create payment endpoint hit');
     try {
-        const { orderId, amount } = req.body;
+        const { orderId, amount, paymentMethod = 'COD', transactionId } = req.body
         // Validate ObjectId
         if (!mongoose.Types.ObjectId.isValid(orderId)) {
             logger.warn('invalid order id');
@@ -41,10 +53,15 @@ const createPayment = async (req, res) => {
         const payment = await Payment.create({
             orderId,
             userId: req.info.userId,
-            amount,
+            amount: Number(amount || order.totalAmount || 0),
+            paymentMethod,
+            transactionId,
             paymentStatus: 'pending',
-
         });
+
+        order.orderStatus = 'pending_payment';
+        order.paymentStatus = 'pending';
+        await order.save();
         if(!payment){
             logger.warn('Payment creation failed');
             return res.status(400).json({
@@ -77,9 +94,9 @@ const createPayment = async (req, res) => {
 const getPendingPayment = async (req, res) => {
     logger.info('get pending payment endpoint hit');
     try {
-        const payments = await Payment.find({ paymentStatus: "pending" })
-            .populate("orderId")
-            .populate("userId", "name email");
+         const payments = await Payment.find({ paymentStatus: 'pending' })
+            .populate('orderId')
+            .populate('userId', 'name email');
 
         if (!payments) {
             logger.warn('pending payments not found');
@@ -122,11 +139,8 @@ const approvePayment = async (req, res) => {
 
         const payment = await Payment.findOneAndUpdate(
             { orderId },
-            {
-                paymentStatus: "success",
-                paidAt: new Date()
-            },
-            { new: true }
+            { paymentStatus: 'success', paidAt: new Date() },
+            { new: true },
         );
 
         if (!payment) {
@@ -138,17 +152,13 @@ const approvePayment = async (req, res) => {
         }
 
         // Update Order Status
-        const order = await Order.findByIdAndUpdate(orderId, {
-            orderStatus: "paid"
-        });
-        const user = await User.findById(req.info.userId);
-        // order events
-        orderEvents.emit("order.status.changed", {
-            email: user.email,
-            name: user.name,
-            orderId: order._id,
-            status: order.orderStatus
-        });
+        const order = await Order.findByIdAndUpdate(
+            orderId,
+            { orderStatus: 'paid', paymentStatus: 'paid' },
+            { new: true },
+        );
+
+        await emitOrderStatusChanged({ actorUserId: req.info.userId, order });
         res.status(200).json({
             success: true,
             message: "Payment approved and order confirmed",
@@ -179,11 +189,9 @@ const rejectPayment = async (req, res) => {
 
         const payment = await Payment.findOneAndUpdate(
             { orderId },
-            {
-                paymentStatus: "failed"
-            },
-            { new: true }
-        );
+            { paymentStatus: 'failed' },
+            { new: true },
+        );      
 
         if (!payment) {
             logger.warn('payment not found');
@@ -194,17 +202,13 @@ const rejectPayment = async (req, res) => {
         }
 
         // Update Order Status
-        const order = await Order.findByIdAndUpdate(orderId, {
-            orderStatus: "failed"
-        });
-        const user = await User.findById(req.info.userId);
-        // order events
-        orderEvents.emit("order.status.changed", {
-            email: user.email,
-            name: user.name,
-            orderId: order._id,
-            status: order.orderStatus
-        });
+        const order = await Order.findByIdAndUpdate(
+            orderId,
+            { orderStatus: 'payment_failed', paymentStatus: 'failed' },
+            { new: true },
+        );
+
+        await emitOrderStatusChanged({ actorUserId: req.info.userId, order });
         logger.info('payment rejected and order failed');
         res.status(200).json({
             success: true,

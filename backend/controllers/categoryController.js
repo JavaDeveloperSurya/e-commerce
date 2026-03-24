@@ -29,18 +29,22 @@ const createCategory = async (req, res) => {
     }
 }
 
+const fetchCategories = async ({ includeInactive = false } = {}) => {
+    const filters = includeInactive ? {} : { isActive: true };
+    return Category.find(filters).populate('parentCategory', 'name slug').sort({ name: 1 });
+};
 // get all categories
 const getAllCategories = async(req,res)=>{
     logger.info('get all categories endpoint hit');
     try {
-          const categories = await Category.find({ isActive: true }).populate('parentCategory', 'name slug').sort({ name: 1 });
-        if(!categories){
-            logger.warn('category not found');
-            return res.status(404).json({
-                success:false,
-                message:'category not found'
-            })
-        }
+          const categories = await fetchCategories();
+            if(!categories){
+                logger.warn('category not found');
+                return res.status(404).json({
+                    success:false,
+                    message:'category not found'
+                })
+            }
         res.status(200).json({
             success:true,
             message:'fetch categories',
@@ -54,7 +58,23 @@ const getAllCategories = async(req,res)=>{
         });
     }
 }
-
+const getAllCategoriesForAdmin = async(req,res)=>{
+    logger.info('get all categories for admin endpoint hit');
+    try {
+          const categories = await fetchCategories({ includeInactive: true });
+        res.status(200).json({
+            success:true,
+            message:'fetch categories',
+            categories
+        })
+    } catch (error) {
+        logger.error('error while fetching admin categories: ', error);
+        res.status(500).json({
+            success: false,
+            message: 'Internal server error'
+        });
+    }
+}
 // get single category
 const getSingleCategory = async(req,res)=>{
     logger.info('get single category endpoint hit');
@@ -160,6 +180,7 @@ module.exports = {
     createCategory,
     getAllCategories,
     getSingleCategory,
+    getAllCategoriesForAdmin,
     updateCategory,
     deleteCategory
 }

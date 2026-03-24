@@ -90,7 +90,7 @@ const verifyProduct = async(req,res)=>{
 const rejectProduct = async(req,res)=>{
     logger.info('rejected product endpoint hit');
     const productId = req.params.id;
-    const reason = req.body.reason || 'The product did not meet our platform guidelines.';
+    const reason = 'The product did not meet our platform guidelines.';
     try {
         //Validate ObjectId
         if (!mongoose.Types.ObjectId.isValid(productId)) {
@@ -123,7 +123,7 @@ const rejectProduct = async(req,res)=>{
                 message: "Product already rejected",
             });
         }
-        if (!seller) {
+        if (!product.sellerId) {
             logger.warn("seller not found");
             return res.status(404).json({
                 success: false,

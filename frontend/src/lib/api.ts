@@ -56,7 +56,7 @@ interface CartResponse {
 
 interface WishlistResponse {
   wishlist?: { items: Product[] };
-  data?: { items: Product[] };
+  data?: { items?: Product[]; products?: Product[] };
   items?: Product[];
 }
 
@@ -205,7 +205,7 @@ export const wishlistApi = {
 
 // Order APIs
 export const orderApi = {
-  create: (data: { shippingAddress: Address; directItem?: { productId: string; quantity: number; price?: number } }) => api<OrderResponse>('/shopease/create', { method: 'POST', body: data }),
+   create: (data: { shippingAddress: Address; directItem?: { productId: string; quantity: number; price?: number } }) => api<OrderResponse>('/shopease/create', { method: 'POST', body: data }),
   getMyOrders: () => api<OrderListResponse>('/shopease/my-orders'),
   getAll: () => api<OrderListResponse>('/shopease/orders'),
   getById: (id: string) => api<OrderResponse>(`/shopease/${id}`),
@@ -216,7 +216,7 @@ export const orderApi = {
 
 // Payment APIs
 export const paymentApi = {
- create: (data: { orderId: string; paymentMethod: string; transactionId: string; amount?: number }) => api('/secure/create', { method: 'POST', body: data }),
+  create: (data: { orderId: string; paymentMethod: string; transactionId: string; amount?: number }) => api('/secure/create', { method: 'POST', body: data }),
   getPending: () => api<PaymentListResponse>('/secure/pending'),
   approve: (orderId: string) => api(`/secure/payment/${orderId}/approve`, { method: 'PATCH' }),
   reject: (orderId: string) => api(`/secure/payment/${orderId}/reject`, { method: 'PATCH' }),
@@ -252,6 +252,7 @@ export const adminApi = {
 export const categoryApi = {
   create: (data: { name: string; description: string; parentCategory?: string | null }) => api('/admin/category', { method: 'POST', body: data }),
   getAll: () => api<AdminCategoriesResponse>('/admin/categories'),
+  getAllForAdmin: () => api<AdminCategoriesResponse>('/admin/categories/all'),
   getById: (id: string) => api<Category>(`/admin/category/${id}`),
   update: (id: string, data: Partial<Category>) => api(`/admin/category/${id}/update`, { method: 'PUT', body: data }),
   delete: (id: string) => api(`/admin/category/${id}/delete`, { method: 'DELETE' }),

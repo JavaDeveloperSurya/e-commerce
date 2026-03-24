@@ -9,14 +9,15 @@ const getCart = async(req,res)=>{
     const userId = req.info.userId;
     try {
         const cart = await Cart.findOne({ userId })
-            .populate("items.productId", "name price images");
+            .populate("items.productId", "name price discountPrice images");
 
         if (!cart) {
             logger.info('user cart empty');
             return res.status(200).json({
                 success: true,
                 message: "Cart is empty",
-                data: { items: [] }
+                cart: { items: [], totalAmount: 0 },
+                data: { items: [], totalAmount: 0 }
             });
         }
         const totalAmount = cart.items.reduce(
@@ -26,6 +27,10 @@ const getCart = async(req,res)=>{
         logger.info('user cart fetched');
         res.status(200).json({
             success: true,
+            cart: {
+                items: cart.items,
+                totalAmount
+            },
             data: {
                 items: cart.items,
                 totalAmount
@@ -62,6 +67,9 @@ const addToCart = async(req,res)=>{
                 message: "Product not found"
             });
         }
+        if (!product.isActive || product.stock < 1) {
+            return res.status(400).json({ success: false, message: 'Product is not available' });
+        }
         // try increment 
         const updatedCart = await Cart.findOneAndUpdate(
             {
@@ -83,18 +91,19 @@ const addToCart = async(req,res)=>{
                         items: {
                             productId,
                             quantity,
-                            price: product.price
+                            price: product.discountPrice || product.price
                         }
                     }
                 },
                 { upsert: true, new: true }
             );
         }
-        const cart = await Cart.findOne({ userId }).populate("items.productId", "name price images");
+        const cart = await Cart.findOne({ userId }).populate("items.productId", "name price discountPrice images");
         logger.info('Product added to cart');
         res.status(200).json({
             success: true,
             message: "Product added to cart",
+            cart,
             data: cart
         });
     } catch (error) {
@@ -134,11 +143,12 @@ const updateCart = async (req, res) => {
             );
         }
 
-        const cart = await Cart.findOne({ userId }).populate("items.productId", "name price images");
+        const cart = await Cart.findOne({ userId }).populate("items.productId", "name price discountPrice images");
         logger.info('cart updated successfully');
         res.status(200).json({
             success: true,
             message: "Cart updated",
+            cart,
             data: cart
         });
     } catch(error){
@@ -173,6 +183,7 @@ const removeCart = async(req,res)=>{
         res.status(200).json({
             success: true,
             message: "Item removed from cart",
+            cart,
             data: cart
         });
     } catch (error) {
@@ -204,6 +215,7 @@ const clearCart = async(req,res)=>{
             return res.status(200).json({
                 success: true,
                 message: "Cart already empty",
+                cart,
                 data: cart
             });
         }
@@ -214,6 +226,7 @@ const clearCart = async(req,res)=>{
         res.status(200).json({
             success: true,
             message: "Cart cleared",
+            cart,
             data: cart
         });
 

@@ -21,9 +21,9 @@ const addReview = async (req, res) => {
 
         // Check if user purchased & order delivered
         const order = await Order.findOne({
-        userId: userId,
-        orderStatus: "delivered",
-        "items.productId": productId
+            userId: userId,
+            orderStatus: "delivered",
+            "items.productId": productId
         });
 
         if (!order) {
@@ -64,6 +64,7 @@ const addReview = async (req, res) => {
                 message: "You already reviewed this product"
             });
         }
+        logger.error('review creation failed',err);
         res.status(500).json({
             sucess:false,
             message:err.message || 'internal server error'
@@ -73,6 +74,7 @@ const addReview = async (req, res) => {
 
 // get review
 const getReview = async (req, res) => {
+    logger.info('get-review endpoint hit');
     try {
         const productId = req.params.productId;
         // Validate ObjectId
@@ -84,9 +86,7 @@ const getReview = async (req, res) => {
             });
         }
 
-        const reviews = await Review.find({ productId })
-        .populate("userId", "name")
-        .sort({ createdAt: -1 });
+        const reviews = await Review.find({ productId }).populate('userId', 'name').sort({ createdAt: -1 });
 
         if (!reviews) {
             logger.warn('review not found');
@@ -104,29 +104,31 @@ const getReview = async (req, res) => {
         });
 
     } catch (err) {
-        res.status(500).json({ message: err.message });
+        logger.error('review fetched failed');
+        res.status(500).json({ 
+            success:false,
+            message: err.message 
+        });
     }
 };
 
 // update review
 const updateReview = async (req, res) => {
+    logger.info('update review endpoint hit');
   try {
     const reviewId = req.params.id;
-    const userId = req.user.id;
+    const userId = req.info.userId;
     const { rating, comment } = req.body;
 
-    const review = await Review.findOneAndUpdate(
-      { _id: reviewId, userId: userId },
-      { rating, comment },
-      { new: true }
-    );
+    const review = await Review.findOneAndUpdate({ _id: reviewId, userId }, { rating, comment }, { new: true });
 
     if (!review) {
+        logger.error('Review not found or not authorized');
       return res.status(404).json({
         message: "Review not found or not authorized"
       });
     }
-
+    logger.info('update review successfully');
     res.status(200).json({
       success: true,
       message: "Review updated",
@@ -134,34 +136,40 @@ const updateReview = async (req, res) => {
     });
 
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    logger.error('update review failed');
+    res.status(500).json({ 
+        success: false,
+        message: err.message || ' Internal server error'
+    });
   }
 };
 
 // delete review
 const deleteReview = async (req, res) => {
+    logger.info('delete review endpoint hit');
   try {
     const reviewId = req.params.id;
-    const userId = req.user.id;
+    const userId = req.info.userId;
 
-    const review = await Review.findOneAndDelete({
-      _id: reviewId,
-      userId: userId
-    });
+    const review = await Review.findOneAndDelete({ _id: reviewId, userId });
 
     if (!review) {
       return res.status(404).json({
         message: "Review not found or not authorized"
       });
     }
-
+    logger.info('delete review successfully');
     res.status(200).json({
       success: true,
       message: "Review deleted"
     });
 
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    logger.error('delete review failed');
+    res.status(500).json({ 
+        success:false,
+        message: err.message 
+    });
   }
 };
 

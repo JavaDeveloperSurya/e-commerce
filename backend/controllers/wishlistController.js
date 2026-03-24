@@ -13,13 +13,13 @@ const getWishlist = async(req,res)=>{
         if (!wishlist) {
             return res.status(200).json({
                 success: true,
-                data: { products: [] }
+                wishlist: { items: [] },
             });
         }
         logger.info('wishlist fetchd successfully');
         res.status(200).json({
             success: true,
-            data: wishlist
+            wishlist: { items: wishlist.products },
         });
 
     } catch (error) {
@@ -72,9 +72,9 @@ const addToWishlist = async(req,res)=>{
 // update wishlist
 const updateWishlist = async(req,res)=>{
     logger.info('update wishlist endpoint hit');
-    const userId = req.info.userId;
     try {
-        const { products } = req.body;
+        const userId = req.info.userId;
+        const productId = req.params.productId;
         if (!Array.isArray(products)) {
         return res.status(400).json({
             success: false,

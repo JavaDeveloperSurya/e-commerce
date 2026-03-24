@@ -279,7 +279,7 @@ const deleteProduct = async (req, res) => {
   const productId = req.params.id;
   const userId = req.info.userId;        // logged-in user
   const userRole = req.info.role;    // "admin" | "seller"
-  const { reason } = req.body;
+  const { reason } = req.body || 'The product violated our platform policies or guidelines.';
   try {
     const sellerProfile = await SellerProfile.findOne({ userId }).select('_id');
     const product = await Product.findById(productId).populate({

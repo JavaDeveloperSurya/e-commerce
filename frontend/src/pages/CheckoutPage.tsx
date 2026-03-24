@@ -15,7 +15,6 @@ const CheckoutPage = () => {
   const [cart, setCart] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [placing, setPlacing] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState('COD');
   const [address, setAddress] = useState({
     street: '', city: '', state: '', country: 'India', postalCode: '',
   });
@@ -42,7 +41,7 @@ const CheckoutPage = () => {
       const orderId = orderData.order?._id || orderData.data?._id;
 
       if (orderId) {
-        await paymentApi.create({ orderId, paymentMethod, transactionId: `TXN_${Date.now()}` });
+        await paymentApi.create({ orderId, amount: total, paymentMethod: 'COD', transactionId: `COD_${Date.now()}` });
       }
 
       toast({ title: 'Order Placed!', description: 'Your order has been placed successfully.' });
@@ -94,13 +93,9 @@ const CheckoutPage = () => {
           {/* Payment Method */}
           <div className="rounded-lg border bg-card p-6">
             <h3 className="font-display font-semibold text-card-foreground mb-4">Payment Method</h3>
-            <div className="space-y-2">
-              {['COD', 'UPI', 'Card'].map(m => (
-                <label key={m} className={`flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-colors ${paymentMethod === m ? 'border-primary bg-primary/5' : ''}`}>
-                  <input type="radio" name="payment" value={m} checked={paymentMethod === m} onChange={() => setPaymentMethod(m)} className="text-primary" />
-                  <span className="text-sm font-medium text-card-foreground">{m === 'COD' ? 'Cash on Delivery' : m}</span>
-                </label>
-              ))}
+            <div className="rounded-lg border border-primary bg-primary/5 p-3 text-sm">
+              <p className="font-medium text-card-foreground">Cash on Delivery</p>
+              <p className="mt-1 text-muted-foreground">This checkout currently creates COD payments only.</p>
             </div>
           </div>
         </div>
