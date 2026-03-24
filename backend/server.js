@@ -60,7 +60,7 @@ app.use('/api/product',productRoutes);
 app.use('/api/users/carts',cartRoutes);
 app.use('/api/users/wishlists',wishlistRoutes);
 app.use('/api/shopease',ddosProtection,orderRoutes);
-app.use('/api/secure/',ddosProtection,rateLimit,paymentRoutes);
+app.use('/api/shopease/',ddosProtection,rateLimit,paymentRoutes);
 app.use('/api/reviews',reviewRoutes);
 
 // global error handler

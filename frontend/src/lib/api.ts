@@ -205,7 +205,7 @@ export const wishlistApi = {
 
 // Order APIs
 export const orderApi = {
-  create: (data: { shippingAddress: Address }) => api<OrderResponse>('/shopease/create', { method: 'POST', body: data }),
+  create: (data: { shippingAddress: Address; directItem?: { productId: string; quantity: number; price?: number } }) => api<OrderResponse>('/shopease/create', { method: 'POST', body: data }),
   getMyOrders: () => api<OrderListResponse>('/shopease/my-orders'),
   getAll: () => api<OrderListResponse>('/shopease/orders'),
   getById: (id: string) => api<OrderResponse>(`/shopease/${id}`),
@@ -216,7 +216,7 @@ export const orderApi = {
 
 // Payment APIs
 export const paymentApi = {
-  create: (data: { orderId: string; paymentMethod: string; transactionId: string }) => api('/secure/create', { method: 'POST', body: data }),
+ create: (data: { orderId: string; paymentMethod: string; transactionId: string; amount?: number }) => api('/secure/create', { method: 'POST', body: data }),
   getPending: () => api<PaymentListResponse>('/secure/pending'),
   approve: (orderId: string) => api(`/secure/payment/${orderId}/approve`, { method: 'PATCH' }),
   reject: (orderId: string) => api(`/secure/payment/${orderId}/reject`, { method: 'PATCH' }),

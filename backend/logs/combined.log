@@ -5058,3 +5058,306 @@
 {"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-23T18:10:02.315Z"}
 {"level":"info","message":"GET /api/admin/categories 304 - - 149.057 ms","service":"e_commerce-api","timestamp":"2026-03-23T18:10:02.456Z"}
 {"level":"info","message":"GET /api/product/all 304 - - 257.405 ms","service":"e_commerce-api","timestamp":"2026-03-23T18:10:02.572Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-24T04:27:27.698Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-24T04:27:27.821Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:27:28.350Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-24T04:27:28.360Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-24T04:27:28.370Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-24T04:27:29.686Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.482Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.503Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.523Z"}
+{"level":"warn","message":"authentication failed, token expired","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.532Z"}
+{"level":"info","message":"GET /api/users/profile 401 65 - 28.474 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.538Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 115.148 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.618Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 323.336 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.802Z"}
+{"level":"info","message":"refresgh token endpoint hit...","service":"e_commerce-api","timestamp":"2026-03-24T04:28:05.814Z"}
+{"level":"info","message":"Generating tokens for user: kumarsurya45394@gmail.com","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.041Z"}
+{"level":"info","message":"Tokens generated successfully for userId: 69bff5fc3b15523e70338269","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.202Z"}
+{"level":"info","message":"token refreshed sucessfully","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.280Z"}
+{"level":"info","message":"POST /api/auth/refresh 200 361 - 497.222 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.282Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.291Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.293Z"}
+{"level":"info","message":"admin and user auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.294Z"}
+{"level":"info","message":"user authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.410Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.411Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.544Z"}
+{"level":"info","message":"GET /api/users/profile 304 - - 257.864 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:28:06.547Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:11.726Z"}
+{"level":"info","message":"review fetched successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:29:11.796Z"}
+{"level":"info","message":"GET /api/reviews/product/69c180861046787c185e3ac7 304 - - 65.122 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:11.800Z"}
+{"level":"info","message":"GET /api/product/69c180861046787c185e3ac7 304 - - 144.622 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:11.870Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:25.848Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:25.870Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 109.601 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:25.979Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 196.444 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:26.047Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.337Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.341Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.373Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.377Z"}
+{"level":"info","message":"admin and user auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.378Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 63.731 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.414Z"}
+{"level":"info","message":"user authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.452Z"}
+{"level":"info","message":"get- profile endpoint  hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.454Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 197.589 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.534Z"}
+{"level":"info","message":"user data successfully find ","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.569Z"}
+{"level":"info","message":"GET /api/users/profile 304 - - 202.688 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:29.571Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:31.762Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:31.770Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 66.489 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:31.836Z"}
+{"level":"info","message":"GET /api/product/all?categoryId=69c14b62740406338ceaa0ba 304 - - 139.706 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:31.902Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:34.363Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:34.373Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 122.568 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:34.486Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 206.267 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:34.580Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:37.819Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:37.823Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 168.386 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:37.991Z"}
+{"level":"info","message":"GET /api/product/all?categoryId=69c1751f18a0420e7b7d0488 304 - - 252.456 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:38.072Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:48.968Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:29:48.970Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:48.971Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:29:48.972Z"}
+{"level":"info","message":"add to cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:48.973Z"}
+{"level":"info","message":"Product added to cart","service":"e_commerce-api","timestamp":"2026-03-24T04:29:49.562Z"}
+{"level":"info","message":"POST /api/users/carts/add 200 396 - 599.863 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:49.564Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:51.656Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:29:51.661Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:51.664Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:29:51.668Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:51.671Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:29:52.005Z"}
+{"level":"info","message":"GET /api/users/carts 200 225 - 355.723 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:52.007Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:29:57.852Z"}
+{"level":"info","message":"review fetched successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:29:57.960Z"}
+{"level":"info","message":"GET /api/reviews/product/69c180861046787c185e3ac7 304 - - 92.081 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:57.962Z"}
+{"level":"info","message":"GET /api/product/69c180861046787c185e3ac7 304 - - 172.115 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:29:58.023Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:03.877Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:03.880Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:03.881Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:30:03.881Z"}
+{"level":"info","message":"add to wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:03.882Z"}
+{"level":"info","message":"product added to wishlist successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:04.103Z"}
+{"level":"info","message":"POST /api/users/wishlists/add 200 351 - 229.500 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:30:04.106Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.324Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.328Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.329Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.330Z"}
+{"level":"info","message":"get wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.333Z"}
+{"level":"info","message":"wishlist fetchd successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.560Z"}
+{"level":"info","message":"GET /api/users/wishlists 200 293 - 242.705 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:30:06.562Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:08.273Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:08.278Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 127.519 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:30:08.406Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 204.487 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:30:08.478Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:10.982Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:10.987Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:10.987Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:30:10.988Z"}
+{"level":"info","message":"add to wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:10.989Z"}
+{"level":"info","message":"product added to wishlist successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:11.309Z"}
+{"level":"info","message":"POST /api/users/wishlists/add 200 473 - 330.993 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:30:11.311Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.078Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.082Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.083Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.084Z"}
+{"level":"info","message":"get wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.086Z"}
+{"level":"info","message":"wishlist fetchd successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.315Z"}
+{"level":"info","message":"GET /api/users/wishlists 200 394 - 245.745 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:30:14.319Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:27.712Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:27.721Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 577.130 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:28.298Z"}
+{"level":"info","message":"GET /api/product/all 304 - - 669.156 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:28.381Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.515Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.519Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.520Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.521Z"}
+{"level":"info","message":"add to wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.522Z"}
+{"level":"info","message":"product added to wishlist successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.797Z"}
+{"level":"info","message":"POST /api/users/wishlists/add 200 473 - 286.114 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:31.800Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:34.407Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:34.414Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:34.417Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:31:34.418Z"}
+{"level":"info","message":"get wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:34.425Z"}
+{"level":"info","message":"wishlist fetchd successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:35.347Z"}
+{"level":"info","message":"GET /api/users/wishlists 200 394 - 947.705 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:35.349Z"}
+{"level":"info","message":"get single product endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:36.411Z"}
+{"level":"info","message":"review fetched successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:36.580Z"}
+{"level":"info","message":"GET /api/reviews/product/69c180861046787c185e3ac7 304 - - 152.882 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:36.582Z"}
+{"level":"info","message":"GET /api/product/69c180861046787c185e3ac7 304 - - 223.859 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:36.635Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.757Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.761Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.762Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.763Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.764Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.903Z"}
+{"level":"info","message":"GET /api/users/carts 304 - - 153.082 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:37.905Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:40.849Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:40.854Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:40.855Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:31:40.856Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:40.857Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:31:41.294Z"}
+{"level":"info","message":"GET /api/users/carts 304 - - 452.000 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:41.296Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:48.147Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:31:48.155Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:48.158Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:31:48.162Z"}
+{"level":"info","message":"create order endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:31:48.165Z"}
+{"_message":"Order validation failed","errors":{"paymentStatus":{"kind":"enum","message":"`` is not a valid enum value for path `paymentStatus`.","name":"ValidatorError","path":"paymentStatus","properties":{"enumValues":["pending","paid","failed"],"length":0,"message":"`` is not a valid enum value for path `paymentStatus`.","path":"paymentStatus","type":"enum","value":""},"value":""}},"level":"error","message":"error while creating order Order validation failed: paymentStatus: `` is not a valid enum value for path `paymentStatus`.","service":"e_commerce-api","stack":"ValidationError: Order validation failed: paymentStatus: `` is not a valid enum value for path `paymentStatus`.\n    at model.validate (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\document.js:2864:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async model.$__save (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:389:7)\n    at async model.save (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:663:5)\n    at async D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:2819:9\n    at async Promise.all (index 0)\n    at async Function.create (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:2804:11)\n    at async createOrder (D:\\e-commerce\\backend\\controllers\\orderController.js:77:23)","timestamp":"2026-03-24T04:31:48.558Z"}
+{"level":"info","message":"POST /api/shopease/create 400 124 - 417.695 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:31:48.561Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:32:53.085Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:32:53.088Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:32:53.089Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:32:53.090Z"}
+{"level":"info","message":"create order endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:32:53.091Z"}
+{"_message":"Order validation failed","errors":{"paymentStatus":{"kind":"enum","message":"`` is not a valid enum value for path `paymentStatus`.","name":"ValidatorError","path":"paymentStatus","properties":{"enumValues":["pending","paid","failed"],"length":0,"message":"`` is not a valid enum value for path `paymentStatus`.","path":"paymentStatus","type":"enum","value":""},"value":""}},"level":"error","message":"error while creating order Order validation failed: paymentStatus: `` is not a valid enum value for path `paymentStatus`.","service":"e_commerce-api","stack":"ValidationError: Order validation failed: paymentStatus: `` is not a valid enum value for path `paymentStatus`.\n    at model.validate (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\document.js:2864:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async model.$__save (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:389:7)\n    at async model.save (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:663:5)\n    at async D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:2819:9\n    at async Promise.all (index 0)\n    at async Function.create (D:\\e-commerce\\backend\\node_modules\\mongoose\\lib\\model.js:2804:11)\n    at async createOrder (D:\\e-commerce\\backend\\controllers\\orderController.js:77:23)","timestamp":"2026-03-24T04:32:53.844Z"}
+{"level":"info","message":"POST /api/shopease/create 400 124 - 762.641 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:32:53.847Z"}
+{"level":"info","message":"Using Local Redis","service":"e_commerce-api","timestamp":"2026-03-24T04:33:23.444Z"}
+{"level":"info","message":"Email transporter initialized","service":"e_commerce-api","timestamp":"2026-03-24T04:33:23.569Z"}
+{"level":"info","message":"Cloudinary configured successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:33:24.097Z"}
+{"level":"info","message":"Server is running on port 5000","service":"e_commerce-api","timestamp":"2026-03-24T04:33:24.108Z"}
+{"level":"info","message":"Redis connected","service":"e_commerce-api","timestamp":"2026-03-24T04:33:24.119Z"}
+{"level":"info","message":"MongoDB connected successfully: ac-tndgswv-shard-00-00.z9n5uke.mongodb.net","service":"e_commerce-api","timestamp":"2026-03-24T04:33:25.540Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:27.949Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:33:27.955Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:27.957Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:33:27.962Z"}
+{"level":"info","message":"create order endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:27.964Z"}
+{"level":"info","message":"order created successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:33:29.117Z"}
+{"ip":"::1","level":"error","message":"Cannot call abortTransaction after calling commitTransaction","method":"POST","service":"e_commerce-api","stack":"MongoTransactionError: Cannot call abortTransaction after calling commitTransaction\n    at ClientSession.abortTransaction (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\sessions.js:379:19)\n    at createOrder (D:\\e-commerce\\backend\\controllers\\orderController.js:106:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","status":500,"timestamp":"2026-03-24T04:33:29.122Z","url":"/api/shopease/create"}
+{"level":"info","message":"POST /api/shopease/create 500 467 - 1193.085 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:33:29.131Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.626Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.631Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.632Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.633Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.634Z"}
+{"level":"info","message":"user cart empty","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.798Z"}
+{"level":"info","message":"GET /api/users/carts 200 62 - 183.605 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:33:36.802Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:39.716Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:39.725Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 77.124 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:33:39.802Z"}
+{"level":"info","message":"GET /api/product/all 200 1444 - 264.017 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:33:39.980Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.375Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.378Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.379Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.380Z"}
+{"level":"info","message":"create order endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.380Z"}
+{"level":"warn","message":"cart is empty.can not create order","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.527Z"}
+{"level":"info","message":"POST /api/shopease/create 400 64 - 156.396 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:33:50.532Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.287Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.290Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.291Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.292Z"}
+{"level":"info","message":"add to cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.293Z"}
+{"level":"info","message":"Product added to cart","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.944Z"}
+{"level":"info","message":"POST /api/users/carts/add 200 396 - 663.352 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:33:59.948Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:34:03.382Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:34:03.385Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:34:03.386Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:34:03.386Z"}
+{"level":"info","message":"create order endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:34:03.387Z"}
+{"level":"info","message":"order created successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:34:04.241Z"}
+{"ip":"::1","level":"error","message":"Cannot call abortTransaction after calling commitTransaction","method":"POST","service":"e_commerce-api","stack":"MongoTransactionError: Cannot call abortTransaction after calling commitTransaction\n    at ClientSession.abortTransaction (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\sessions.js:379:19)\n    at createOrder (D:\\e-commerce\\backend\\controllers\\orderController.js:106:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","status":500,"timestamp":"2026-03-24T04:34:04.244Z","url":"/api/shopease/create"}
+{"level":"info","message":"POST /api/shopease/create 500 467 - 866.096 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:34:04.247Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:24.243Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:24.251Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 77.762 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:24.329Z"}
+{"level":"info","message":"GET /api/product/all?categoryId=69c1751f18a0420e7b7d0488 200 752 - 144.830 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:24.389Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.444Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.447Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.448Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.450Z"}
+{"level":"info","message":"add to cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.452Z"}
+{"level":"info","message":"Product added to cart","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.986Z"}
+{"level":"info","message":"POST /api/users/carts/add 200 396 - 553.123 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:26.988Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:29.362Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:29.366Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:29.367Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:29.368Z"}
+{"level":"info","message":"create order endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:29.369Z"}
+{"level":"info","message":"order created successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:30.261Z"}
+{"ip":"::1","level":"error","message":"Cannot call abortTransaction after calling commitTransaction","method":"POST","service":"e_commerce-api","stack":"MongoTransactionError: Cannot call abortTransaction after calling commitTransaction\n    at ClientSession.abortTransaction (D:\\e-commerce\\backend\\node_modules\\mongodb\\lib\\sessions.js:379:19)\n    at createOrder (D:\\e-commerce\\backend\\controllers\\orderController.js:106:23)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)","status":500,"timestamp":"2026-03-24T04:35:30.263Z","url":"/api/shopease/create"}
+{"level":"info","message":"POST /api/shopease/create 500 467 - 906.057 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:30.267Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.292Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.298Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.299Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.301Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.302Z"}
+{"level":"info","message":"user cart empty","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.372Z"}
+{"level":"info","message":"GET /api/users/carts 304 - - 85.648 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:33.374Z"}
+{"level":"info","message":"get all products endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:35.442Z"}
+{"level":"info","message":"get all categories endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:35.454Z"}
+{"level":"info","message":"GET /api/admin/categories 304 - - 91.238 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:35.544Z"}
+{"level":"info","message":"GET /api/product/all 200 1444 - 177.731 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:35.620Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:37.104Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:37.107Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:37.108Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:37.109Z"}
+{"level":"info","message":"add to cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:37.109Z"}
+{"level":"info","message":"Product added to cart","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.523Z"}
+{"level":"info","message":"POST /api/users/carts/add 200 397 - 1425.171 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.528Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.552Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.557Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.558Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.560Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.561Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.866Z"}
+{"level":"info","message":"GET /api/users/carts 200 226 - 323.189 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:38.869Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:41.593Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:41.598Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:41.598Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:41.600Z"}
+{"level":"info","message":"update cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:41.603Z"}
+{"level":"info","message":"cart updated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.141Z"}
+{"level":"info","message":"PUT /api/users/carts/update/69c17fc9808b871886b67d2c 200 388 - 552.318 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.146Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.154Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.157Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.157Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.157Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.158Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.352Z"}
+{"level":"info","message":"GET /api/users/carts 200 226 - 202.387 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:42.354Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:45.923Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:45.927Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:45.927Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:45.928Z"}
+{"level":"info","message":"update cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:45.929Z"}
+{"level":"info","message":"cart updated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.199Z"}
+{"level":"info","message":"PUT /api/users/carts/update/69c17fc9808b871886b67d2c 200 388 - 280.949 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.201Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.212Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.215Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.216Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.216Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.217Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.443Z"}
+{"level":"info","message":"GET /api/users/carts 200 226 - 234.059 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:46.445Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.262Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.266Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.267Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.267Z"}
+{"level":"info","message":"delete cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.268Z"}
+{"level":"warn","message":"item removed from cart","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.491Z"}
+{"level":"info","message":"DELETE /api/users/carts/delete/69c17fc9808b871886b67d2c 200 226 - 234.859 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.493Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.502Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.505Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.505Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.506Z"}
+{"level":"info","message":"get cart endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.507Z"}
+{"level":"info","message":"user cart fetched","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.695Z"}
+{"level":"info","message":"GET /api/users/carts 200 52 - 198.392 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:48.697Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:50.996Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:51.000Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:51.003Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:51.005Z"}
+{"level":"info","message":"get wishlist endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:51.009Z"}
+{"level":"info","message":"wishlist fetchd successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:51.255Z"}
+{"level":"info","message":"GET /api/users/wishlists 304 - - 264.871 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:51.258Z"}
+{"level":"info","message":"authenticate endpoin hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.258Z"}
+{"level":"info","message":"authenticated successfully","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.260Z"}
+{"level":"info","message":"buyer auth middleware endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.261Z"}
+{"level":"info","message":"buyer-compatible account authenticated","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.261Z"}
+{"level":"info","message":"get user orders endpoint hit","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.262Z"}
+{"level":"error","message":"order not found","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.384Z"}
+{"level":"info","message":"GET /api/shopease/my-orders 400 45 - 129.003 ms","service":"e_commerce-api","timestamp":"2026-03-24T04:35:54.386Z"}

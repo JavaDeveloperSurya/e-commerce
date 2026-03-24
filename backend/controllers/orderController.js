@@ -80,7 +80,7 @@ const createOrder = async (req, res) => {
             totalAmount,
             shippingAddress,
             orderStatus: "created",
-            paymentStatus: ""
+            paymentStatus: "pending"
         }], { session });
 
 
