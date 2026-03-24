@@ -15,7 +15,7 @@ const HomePage = () => {
       productApi.getAll().catch(() => ({ products: [] })),
       categoryApi.getAll().catch(() => ({ categories: [] })),
     ]).then(([productData, categoryData]) => {
-      setFeaturedProducts((productData.products || []).slice(0, 4));
+      setFeaturedProducts((productData.products || []));
       setCategories((categoryData.categories || []).slice(0, 6));
     });
   }, []);

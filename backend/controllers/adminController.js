@@ -152,6 +152,7 @@ const verifySeller = async(req,res)=>{
         await user.save();
         seller.approvalStatus = 'verified';
         await seller.save();
+        req.info.role='seller';
         logger.info('seller verified successfully');
         await sellerApprovalEmailHelper(user.email,user.name,seller.shopName,seller.approvalStatus);
         res.status(200).json({

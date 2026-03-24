@@ -6,7 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Navbar } from "@/components/Navbar";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
-
+import { Link } from "react-router-dom";
 import Index from "./pages/Index";
 import LoginPage from "./pages/LoginPage";
 import ProductsPage from "./pages/ProductsPage";
@@ -47,12 +47,55 @@ const App = () => (
             </Routes>
           </main>
           {/* Footer */}
-          <footer className="border-t bg-card py-8">
-            <div className="page-container text-center text-sm text-muted-foreground">
-              <p className="font-display font-semibold text-foreground mb-1">Shop<span className="text-secondary">Ease</span></p>
-              <p>© {new Date().getFullYear()} ShopEase. All rights reserved.</p>
-            </div>
-          </footer>
+          
+
+<footer className="border-t bg-card py-10">
+  <div className="page-container grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+
+    {/* Brand */}
+    <div>
+      <h2 className="font-display text-xl font-semibold text-foreground mb-2">
+        Shop<span className="text-secondary">Ease</span>
+      </h2>
+      <p className="text-muted-foreground">
+        Your one-stop destination for all your shopping needs. Fast delivery, best prices.
+      </p>
+    </div>
+
+    {/* Quick Links */}
+    <div>
+      <h3 className="font-semibold text-foreground mb-3">Quick Links</h3>
+      <ul className="space-y-2 text-muted-foreground">
+        <li><Link to="/" className="hover:text-foreground">Home</Link></li>
+        <li><Link to="/products" className="hover:text-foreground">Shop</Link></li>
+        <li><Link to="/orders" className="hover:text-foreground">Orders</Link></li>
+      </ul>
+    </div>
+
+    {/* Contact */}
+    <div>
+      <h3 className="font-semibold text-foreground mb-3">Contact Us</h3>
+      <p className="text-muted-foreground">
+        Email: 
+        <a 
+          href="mailto:mrrajprasad5@gmail.com" 
+          className="hover:text-foreground ml-1"
+        >
+          mrrajprasad5@gmail.com
+        </a>
+      </p>
+    </div>
+
+  </div>
+
+  {/* Bottom Bar */}
+  <div className="border-t mt-8 pt-4 text-center text-muted-foreground text-sm">
+    <p>
+      © {new Date().getFullYear()} 
+      <span className="font-semibold text-foreground ml-1">ShopEase</span>. All rights reserved.
+    </p>
+  </div>
+</footer>
         </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>

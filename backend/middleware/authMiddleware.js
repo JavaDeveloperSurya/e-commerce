@@ -67,6 +67,7 @@ const buyerAuth = async(req,res,next)=>{
 const sellerAuth = async(req,res,next)=>{
     logger.info('seller auth middleware endpoint hit');
     try {
+        console.log(req.info.role)
         if(req.info.role == 'seller'){
             logger.info('seller authenticated');
             return next();
